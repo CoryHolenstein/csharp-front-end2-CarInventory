@@ -10,16 +10,32 @@ using System.Windows.Forms;
 
 namespace LoginUI
 {
+
+    public class LoginInfo
+    {
+        public String username { get; set; }
+        public String password { get; set; }
+    }
+
+
     public partial class LoginFormUI : Form
     {
+        LoginInfo loginInfo = new LoginInfo();
         public LoginFormUI()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+    
+        //username
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            loginInfo.username = textBox1.Text;
+        }
+        //password
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            loginInfo.password = textBox1.Text;
         }
     }
 }

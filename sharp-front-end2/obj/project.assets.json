@@ -8,28 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Coryb\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\EQ Games\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Coryb\\VS projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
+      "projectUniqueName": "E:\\cory projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
       "projectName": "sharp-front-end2",
-      "projectPath": "C:\\Users\\Coryb\\VS projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
-      "packagesPath": "C:\\Users\\Coryb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coryb\\VS projects\\sharp-front-end2\\sharp-front-end2\\obj\\",
+      "projectPath": "E:\\cory projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
+      "packagesPath": "C:\\Users\\EQ Games\\.nuget\\packages\\",
+      "outputPath": "E:\\cory projects\\sharp-front-end2\\sharp-front-end2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Coryb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EQ Games\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

@@ -1,0 +1,10 @@
+E:\cory projects\sharp-front-end2\LoginUI\bin\Debug\LoginUI.exe.config
+E:\cory projects\sharp-front-end2\LoginUI\bin\Debug\LoginUI.exe
+E:\cory projects\sharp-front-end2\LoginUI\bin\Debug\LoginUI.pdb
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.AssemblyReference.cache
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.Properties.Resources.resources
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.GenerateResource.cache
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.CoreCompileInputs.cache
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.exe
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.pdb
+E:\cory projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.LoginInfo.resources
