@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "6D5kcqGqSDfFgJlbNg+MLJy4qYDvX3VqE1R3O+zngoaMVLe7iDUv3WFD1JJa6WIzlDtwPjl34qFnbuRHEH7G/w==",
+  "dgSpecHash": "WCDwJ4xuvgmCbuG8YS6b1YRIjHZkZyiSS6IQ72pOyURaYkSPXJtB8n/CahBPeNX+iwnAhiYvBAQj8NHpVRx1bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Coryb\\VS projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
     "C:\\Users\\Coryb\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Coryb\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Coryb\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512"
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512",
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

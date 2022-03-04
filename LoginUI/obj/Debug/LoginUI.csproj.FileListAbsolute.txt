@@ -56,3 +56,5 @@ C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.Cop
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.exe
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.pdb
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.AssemblyReference.cache
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\System.Net.Http.Json.dll
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\System.Net.Http.Json.xml

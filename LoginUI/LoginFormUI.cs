@@ -14,6 +14,7 @@ using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.IO;
+using System.Net.Http.Json;
 
 namespace LoginUI
 {
@@ -58,13 +59,25 @@ namespace LoginUI
         private void Button_LoginButton_Click(object sender, EventArgs e)
         {
 
-            Task<Uri> UriOutput = SendLoginInfo(username, password);
+            SendLoginInfo(username, password);
         }
 
-        public static async Task<Uri> SendLoginInfo(String username, String password)
+        public static async void SendLoginInfo(String username, String password)
         {
-            HttpClient client = new HttpClient();
 
+            var client = new HttpClient();
+
+            var userInfo = new LoginInfo(username, password);
+            var requestContent = JsonContent.Create(userInfo);
+
+            var response = await client.PostAsync("http://localhost:3000/testpoint", requestContent);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                // the request failed somehow
+            }
+
+            /*
             var url = "http://127.0.0.1:3000/testpoint";
             var request = WebRequest.Create(url);
             request.Method = "POST";
@@ -90,7 +103,8 @@ namespace LoginUI
             client.Dispose();
             response.Close();
 
-            return response.ResponseUri;
+            return response.ResponseUri;*/
+           
         }
 
 
