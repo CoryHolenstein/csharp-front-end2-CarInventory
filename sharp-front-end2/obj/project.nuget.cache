@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "c6N65RrO0EpRnJl3f/sB/SZ4tWFGSaqMP/bJ5Xd9enJztvVgw6qzgxHIhqtf3JdYotiKEt9UB+/gKEMQJ11y1g==",
+  "dgSpecHash": "6D5kcqGqSDfFgJlbNg+MLJy4qYDvX3VqE1R3O+zngoaMVLe7iDUv3WFD1JJa6WIzlDtwPjl34qFnbuRHEH7G/w==",
   "success": true,
-  "projectFilePath": "E:\\cory projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
+  "projectFilePath": "C:\\Users\\Coryb\\VS projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\EQ Games\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\EQ Games\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\EQ Games\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512"
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Coryb\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512"
   ],
   "logs": []
 }

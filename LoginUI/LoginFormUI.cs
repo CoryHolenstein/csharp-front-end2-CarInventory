@@ -12,7 +12,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
 using System.Text.Json;
-
+using System.Threading.Tasks;
 using System.IO;
 
 namespace LoginUI
@@ -57,25 +57,43 @@ namespace LoginUI
 
         private void Button_LoginButton_Click(object sender, EventArgs e)
         {
-             HttpClient client = new HttpClient();
 
-            var url = "http://127.0.0.1:3000/users/login";
+            Task<Uri> UriOutput = SendLoginInfo(username, password);
+        }
+
+        public static async Task<Uri> SendLoginInfo(String username, String password)
+        {
+            HttpClient client = new HttpClient();
+
+            var url = "http://127.0.0.1:3000/testpoint";
             var request = WebRequest.Create(url);
             request.Method = "POST";
 
-            var UserInfo = new LoginInfo(username,password);
+            var UserInfo = new LoginInfo(username, password);
             var json = JsonSerializer.Serialize(UserInfo);
+            Console.Write(json);
+            Console.WriteLine(JsonSerializer.Serialize(UserInfo));
             byte[] byteArray = Encoding.UTF8.GetBytes(json);
 
             var reqStream = request.GetRequestStream();
             reqStream.Write(byteArray, 0, byteArray.Length);
+
+
+
             var response = request.GetResponse();
             var respStream = response.GetResponseStream();
 
             var reader = new StreamReader(respStream);
             string data = reader.ReadToEnd();
             Console.WriteLine(data);
+
+            client.Dispose();
+            response.Close();
+
+            return response.ResponseUri;
         }
+
+
     }
 }
 //https://zetcode.com/csharp/getpostrequest/
