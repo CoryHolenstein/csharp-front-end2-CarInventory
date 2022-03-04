@@ -91,6 +91,7 @@ namespace LoginUI
             this.Button_LoginButton.TabIndex = 5;
             this.Button_LoginButton.Text = "Login";
             this.Button_LoginButton.UseVisualStyleBackColor = true;
+            this.Button_LoginButton.Click += new System.EventHandler(this.Button_LoginButton_Click);
             // 
             // Label_LoginResponse
             // 

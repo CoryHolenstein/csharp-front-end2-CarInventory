@@ -8,19 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net;
+using System.Text.Json;
+
+using System.IO;
+
 namespace LoginUI
 {
 
-    public class LoginInfo
-    {
-        public String username { get; set; }
-        public String password { get; set; }
-    }
+ 
 
 
     public partial class LoginFormUI : Form
     {
-        LoginInfo loginInfo = new LoginInfo();
+        String username = "",
+            password = "";
+        public class LoginInfo
+        {
+            public String username { get; set; }
+            public String password { get; set; }
+
+            public LoginInfo(String user, String pass)
+            {
+                username = user;
+                password = pass;
+            }
+        }
+
+     
         public LoginFormUI()
         {
             InitializeComponent();
@@ -30,12 +47,35 @@ namespace LoginUI
         //username
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            loginInfo.username = textBox1.Text;
+           username = textBox1.Text;
         }
         //password
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            loginInfo.password = textBox1.Text;
+            password = textBox2.Text;
+        }
+
+        private void Button_LoginButton_Click(object sender, EventArgs e)
+        {
+             HttpClient client = new HttpClient();
+
+            var url = "http://127.0.0.1:3000/users/login";
+            var request = WebRequest.Create(url);
+            request.Method = "POST";
+
+            var UserInfo = new LoginInfo(username,password);
+            var json = JsonSerializer.Serialize(UserInfo);
+            byte[] byteArray = Encoding.UTF8.GetBytes(json);
+
+            var reqStream = request.GetRequestStream();
+            reqStream.Write(byteArray, 0, byteArray.Length);
+            var response = request.GetResponse();
+            var respStream = response.GetResponseStream();
+
+            var reader = new StreamReader(respStream);
+            string data = reader.ReadToEnd();
+            Console.WriteLine(data);
         }
     }
 }
+//https://zetcode.com/csharp/getpostrequest/

@@ -6,4 +6,8 @@
     <RootNamespace>sharp_front_end2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="6.0.2" />
+  </ItemGroup>
+
 </Project>

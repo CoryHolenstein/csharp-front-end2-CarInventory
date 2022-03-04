@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gYm+8+U3W6k0epKKpGsFaCYKV8U5vILGCo1GnsKbk4bcBB0oVF2byLj9lsvWGhlv5y7kPkWyH8Zu8XCSMYyubA==",
+  "dgSpecHash": "c6N65RrO0EpRnJl3f/sB/SZ4tWFGSaqMP/bJ5Xd9enJztvVgw6qzgxHIhqtf3JdYotiKEt9UB+/gKEMQJ11y1g==",
   "success": true,
   "projectFilePath": "E:\\cory projects\\sharp-front-end2\\sharp-front-end2\\sharp-front-end2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\EQ Games\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\EQ Games\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\EQ Games\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
