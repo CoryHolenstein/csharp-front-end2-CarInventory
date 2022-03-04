@@ -98,7 +98,7 @@ namespace LoginUI
             this.Label_LoginResponse.AutoSize = true;
             this.Label_LoginResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
-            this.Label_LoginResponse.Location = new System.Drawing.Point(507, 467);
+            this.Label_LoginResponse.Location = new System.Drawing.Point(461, 458);
             this.Label_LoginResponse.Name = "Label_LoginResponse";
             this.Label_LoginResponse.Size = new System.Drawing.Size(0, 29);
             this.Label_LoginResponse.TabIndex = 6;
