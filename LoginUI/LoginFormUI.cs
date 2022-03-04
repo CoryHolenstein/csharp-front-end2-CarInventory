@@ -56,56 +56,36 @@ namespace LoginUI
             password = textBox2.Text;
         }
 
-        private void Button_LoginButton_Click(object sender, EventArgs e)
+        private async void Button_LoginButton_Click(object sender, EventArgs e)
         {
 
-            SendLoginInfo(username, password);
-        }
-
-        public static async void SendLoginInfo(String username, String password)
-        {
 
             var client = new HttpClient();
 
             var userInfo = new LoginInfo(username, password);
             var requestContent = JsonContent.Create(userInfo);
 
-            var response = await client.PostAsync("http://localhost:3000/testpoint", requestContent);
+            var response = await client.PostAsync("http://localhost:3000/users/login", requestContent);
 
-            if (!response.IsSuccessStatusCode)
+            if (response.IsSuccessStatusCode)
             {
                 // the request failed somehow
+                Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
+                Label_LoginResponse.Text = "Request Success!";
+            } else 
+            {
+                Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
+                Label_LoginResponse.Text = "Request Failed!";
             }
 
-            /*
-            var url = "http://127.0.0.1:3000/testpoint";
-            var request = WebRequest.Create(url);
-            request.Method = "POST";
 
-            var UserInfo = new LoginInfo(username, password);
-            var json = JsonSerializer.Serialize(UserInfo);
-            Console.Write(json);
-            Console.WriteLine(JsonSerializer.Serialize(UserInfo));
-            byte[] byteArray = Encoding.UTF8.GetBytes(json);
-
-            var reqStream = request.GetRequestStream();
-            reqStream.Write(byteArray, 0, byteArray.Length);
-
-
-
-            var response = request.GetResponse();
-            var respStream = response.GetResponseStream();
-
-            var reader = new StreamReader(respStream);
-            string data = reader.ReadToEnd();
-            Console.WriteLine(data);
-
-            client.Dispose();
-            response.Close();
-
-            return response.ResponseUri;*/
-           
         }
+
+        private void Label_LoginResponse_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

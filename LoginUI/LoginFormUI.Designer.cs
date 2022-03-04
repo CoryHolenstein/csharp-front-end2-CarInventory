@@ -100,9 +100,9 @@ namespace LoginUI
             this.Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
             this.Label_LoginResponse.Location = new System.Drawing.Point(507, 467);
             this.Label_LoginResponse.Name = "Label_LoginResponse";
-            this.Label_LoginResponse.Size = new System.Drawing.Size(217, 29);
+            this.Label_LoginResponse.Size = new System.Drawing.Size(0, 29);
             this.Label_LoginResponse.TabIndex = 6;
-            this.Label_LoginResponse.Text = "<Login Response>";
+            this.Label_LoginResponse.Click += new System.EventHandler(this.Label_LoginResponse_Click);
             // 
             // LoginFormUI
             // 

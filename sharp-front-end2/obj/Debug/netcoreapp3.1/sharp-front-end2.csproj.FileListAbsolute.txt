@@ -34,3 +34,4 @@ C:\Users\Coryb\VS projects\sharp-front-end2\sharp-front-end2\obj\Debug\netcoreap
 C:\Users\Coryb\VS projects\sharp-front-end2\sharp-front-end2\obj\Debug\netcoreapp3.1\sharp-front-end2.dll
 C:\Users\Coryb\VS projects\sharp-front-end2\sharp-front-end2\obj\Debug\netcoreapp3.1\sharp-front-end2.pdb
 C:\Users\Coryb\VS projects\sharp-front-end2\sharp-front-end2\obj\Debug\netcoreapp3.1\sharp-front-end2.genruntimeconfig.cache
+C:\Users\Coryb\VS projects\sharp-front-end2\sharp-front-end2\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
