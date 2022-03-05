@@ -51,7 +51,7 @@ namespace LoginUI
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(512, 250);
+            this.textBox1.Location = new System.Drawing.Point(512, 237);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 26);
             this.textBox1.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace LoginUI
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(512, 351);
+            this.textBox2.Location = new System.Drawing.Point(512, 333);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 26);
             this.textBox2.TabIndex = 2;
@@ -68,26 +68,26 @@ namespace LoginUI
             // Label_UsernameInput
             // 
             this.Label_UsernameInput.AutoSize = true;
-            this.Label_UsernameInput.Location = new System.Drawing.Point(518, 216);
+            this.Label_UsernameInput.Location = new System.Drawing.Point(518, 205);
             this.Label_UsernameInput.Name = "Label_UsernameInput";
-            this.Label_UsernameInput.Size = new System.Drawing.Size(87, 20);
+            this.Label_UsernameInput.Size = new System.Drawing.Size(79, 19);
             this.Label_UsernameInput.TabIndex = 3;
             this.Label_UsernameInput.Text = "Username:";
             // 
             // Label_PasswordInput
             // 
             this.Label_PasswordInput.AutoSize = true;
-            this.Label_PasswordInput.Location = new System.Drawing.Point(518, 314);
+            this.Label_PasswordInput.Location = new System.Drawing.Point(518, 298);
             this.Label_PasswordInput.Name = "Label_PasswordInput";
-            this.Label_PasswordInput.Size = new System.Drawing.Size(82, 20);
+            this.Label_PasswordInput.Size = new System.Drawing.Size(76, 19);
             this.Label_PasswordInput.TabIndex = 4;
             this.Label_PasswordInput.Text = "Password:";
             // 
             // Button_LoginButton
             // 
-            this.Button_LoginButton.Location = new System.Drawing.Point(555, 402);
+            this.Button_LoginButton.Location = new System.Drawing.Point(555, 382);
             this.Button_LoginButton.Name = "Button_LoginButton";
-            this.Button_LoginButton.Size = new System.Drawing.Size(87, 35);
+            this.Button_LoginButton.Size = new System.Drawing.Size(87, 33);
             this.Button_LoginButton.TabIndex = 5;
             this.Button_LoginButton.Text = "Login";
             this.Button_LoginButton.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace LoginUI
             this.Label_LoginResponse.AutoSize = true;
             this.Label_LoginResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
-            this.Label_LoginResponse.Location = new System.Drawing.Point(461, 458);
+            this.Label_LoginResponse.Location = new System.Drawing.Point(461, 435);
             this.Label_LoginResponse.Name = "Label_LoginResponse";
             this.Label_LoginResponse.Size = new System.Drawing.Size(0, 29);
             this.Label_LoginResponse.TabIndex = 6;
@@ -106,10 +106,10 @@ namespace LoginUI
             // 
             // LoginFormUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1200, 657);
+            this.ClientSize = new System.Drawing.Size(1200, 624);
             this.Controls.Add(this.Label_LoginResponse);
             this.Controls.Add(this.Button_LoginButton);
             this.Controls.Add(this.Label_PasswordInput);
@@ -117,7 +117,7 @@ namespace LoginUI
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Label_LoginText);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginFormUI";
             this.Text = "Login";

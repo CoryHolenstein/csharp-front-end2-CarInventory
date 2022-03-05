@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.IO;
 using System.Net.Http.Json;
 
 namespace LoginUI
@@ -66,20 +54,21 @@ namespace LoginUI
             var requestContent = JsonContent.Create(userInfo);
 
             var response = await client.PostAsync("http://localhost:3000/users/login", requestContent);
-            Console.WriteLine(response.Content.Headers);
-            Console.WriteLine(response.Content);
+            var contents = await response.Content.ReadAsStringAsync();
 
-            if (response.Content.Headers.ContentLength > 42) 
+       
+
+
+            if (contents.Contains("errormessage"))
             {
                 Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
-                Label_LoginResponse.Text = "Wrong username or password.";
-            } else if (response.Content.Headers.ContentLength <= 42)
+                Label_LoginResponse.Text = "Wrong Username or Password.";
+            } else
             {
                 Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
                 Label_LoginResponse.Text = "Correct! Redirecting you...";
             }
-          
-              
+
 
         }
 

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharp-front-end2", "sharp-front-end2\sharp-front-end2.csproj", "{B3EF873C-5056-4E31-8B58-FDA7040A46D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharp-front-end2", "sharp-front-end2\sharp-front-end2.csproj", "{B3EF873C-5056-4E31-8B58-FDA7040A46D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginUI", "LoginUI\LoginUI.csproj", "{782B37EA-7841-4131-8CD4-0BB00E0CE85C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInventory", "CarInventory\CarInventory.csproj", "{237232AA-8171-4027-9E86-640D32E1F17F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{782B37EA-7841-4131-8CD4-0BB00E0CE85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{782B37EA-7841-4131-8CD4-0BB00E0CE85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{782B37EA-7841-4131-8CD4-0BB00E0CE85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237232AA-8171-4027-9E86-640D32E1F17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237232AA-8171-4027-9E86-640D32E1F17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237232AA-8171-4027-9E86-640D32E1F17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237232AA-8171-4027-9E86-640D32E1F17F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
