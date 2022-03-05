@@ -34,6 +34,26 @@ namespace CarInventory
             }
         }
 
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            var client = new HttpClient();
+
+            int card = rnd.Next(100);
+            if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+            {
+                Console.WriteLine("Please input all fields!");
+            } else
+            {
+                CarInfo newCar = new CarInfo(card, TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
+                Console.WriteLine(newCar.ToString());
+                var requestContent = JsonContent.Create(newCar);
+
+                var response = await client.PostAsync("http://localhost:3000/inventory/addcar", requestContent);
+                var contents = await response.Content.ReadAsStringAsync();
+            }
+        }
+
         public CarInventoryUI()
         {
             InitializeComponent();
@@ -51,10 +71,10 @@ namespace CarInventory
             var carInfo = new CarInfo(inventoryID, carBrand, carName,carColor,carType);
             var requestContent = JsonContent.Create(carInfo);
 
-            var response = await client.PostAsync("http://localhost:3000/inventory/cars", requestContent);
+            var response = await client.PostAsync("http://localhost:3000/inventory/getcars", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
-        
 
+            List_CarResults.Items.Add(contents);
 
 
         }
