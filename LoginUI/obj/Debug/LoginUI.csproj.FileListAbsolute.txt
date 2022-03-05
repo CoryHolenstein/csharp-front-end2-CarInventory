@@ -58,3 +58,8 @@ C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.pdb
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.AssemblyReference.cache
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\System.Net.Http.Json.dll
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\System.Net.Http.Json.xml
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\CarInventory.exe
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\CarInventory.pdb
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\CarInventory.exe.config
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\bin\Debug\Newtonsoft.Json.xml

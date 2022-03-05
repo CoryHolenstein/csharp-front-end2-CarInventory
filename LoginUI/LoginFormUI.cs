@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 using System.Net.Http;
 using System.Net.Http.Json;
+using CarInventory;
 
 namespace LoginUI
 {
@@ -67,6 +68,13 @@ namespace LoginUI
             {
                 Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
                 Label_LoginResponse.Text = "Correct! Redirecting you...";
+    
+                
+                Form carInventoryform = new Form();
+                ((Control)ActiveForm).Hide();
+                carInventoryform = new CarInventoryUI();
+                carInventoryform.Show();
+
             }
 
 
