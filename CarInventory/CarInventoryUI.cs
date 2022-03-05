@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 using System.Collections.Generic;
 using System.Text.Json;
 using Newtonsoft.Json;
-
+using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Web.Script.Serialization;
 
@@ -74,9 +74,19 @@ namespace CarInventory
             var response = await client.PostAsync("http://localhost:3000/inventory/getcars", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
 
-            List_CarResults.Items.Add(contents);
-
-
+            //credits :https://stackoverflow.com/questions/15726197/parsing-a-json-array-using-json-net 
+            //
+             JArray contentsArray = JArray.Parse(contents);
+            foreach (JObject o in contentsArray.Children<JObject>())
+		{
+			foreach (JProperty p in o.Properties())
+			{
+				string name = p.Name;
+				//string value = (string)p.Value;
+				Console.WriteLine(name + " -- " + p.Value);
+                     List_CarResults.Items.Add(name + " -- " + p.Value);
+			}
+		}
         }
     }
 }
