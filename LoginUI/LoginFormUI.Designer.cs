@@ -36,6 +36,9 @@ namespace LoginUI
             this.Label_PasswordInput = new System.Windows.Forms.Label();
             this.Button_LoginButton = new System.Windows.Forms.Button();
             this.Label_LoginResponse = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label_LoginText
@@ -104,12 +107,47 @@ namespace LoginUI
             this.Label_LoginResponse.TabIndex = 6;
             this.Label_LoginResponse.Click += new System.EventHandler(this.Label_LoginResponse_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(756, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "LoginInfo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tan;
+            this.label2.Location = new System.Drawing.Point(787, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 22);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "user";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tan;
+            this.label3.Location = new System.Drawing.Point(791, 333);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 22);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "pass";
+            // 
             // LoginFormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1200, 624);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Label_LoginResponse);
             this.Controls.Add(this.Button_LoginButton);
             this.Controls.Add(this.Label_PasswordInput);
@@ -135,6 +173,9 @@ namespace LoginUI
         private System.Windows.Forms.Label Label_PasswordInput;
         private System.Windows.Forms.Button Button_LoginButton;
         private System.Windows.Forms.Label Label_LoginResponse;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
