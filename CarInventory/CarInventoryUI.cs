@@ -32,27 +32,15 @@ namespace CarInventory
                 this.carColor = carColor;
                 this.carType = carType;
             }
-        }
-
-        private async void button1_Click(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-            var client = new HttpClient();
-
-            int card = rnd.Next(100);
-            if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+            public CarInfo(int inventoryID)
             {
-                Console.WriteLine("Please input all fields!");
-            } else
-            {
-                CarInfo newCar = new CarInfo(card, TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
-                Console.WriteLine(newCar.ToString());
-                var requestContent = JsonContent.Create(newCar);
-
-                var response = await client.PostAsync("http://localhost:3000/inventory/addcar", requestContent);
-                var contents = await response.Content.ReadAsStringAsync();
+                this.inventoryID = inventoryID;
+          
             }
         }
+
+       
+       
 
         public CarInventoryUI()
         {
@@ -84,9 +72,70 @@ namespace CarInventory
 				string name = p.Name;
 				//string value = (string)p.Value;
 				Console.WriteLine(name + " -- " + p.Value);
-                     List_CarResults.Items.Add(name + " -- " + p.Value);
+                     List_CarResults.Items.Add(p.Value);
 			}
 		}
+        }
+        private async void Button_RemoveCar_Click(object sender, EventArgs e)
+        {
+            if (List_CarResults.SelectedIndex >= 0)
+            {
+                Console.WriteLine("selected item");
+                //  Console.WriteLine(List_CarResults.SelectedItem.ToString());
+                // if (List_CarResults.SelectedItem.ToString().Contains("InventoryID"))
+                if (int.TryParse(List_CarResults.SelectedItem.ToString(), out int value))
+                {
+                    //call
+                    Console.WriteLine("api call time baby");
+                    var client = new HttpClient();
+
+
+                    var inventoryID = List_CarResults.SelectedItem.ToString();
+                    CarInfo deleteCar = new CarInfo(int.Parse(inventoryID));
+                    //int inventoryIDToSend = int.Parse(inventoryID);
+
+                    var requestContent = JsonContent.Create(deleteCar);
+
+                    var response = await client.PostAsync("http://localhost:3000/inventory/deletecar", requestContent);
+                    var contents = await response.Content.ReadAsStringAsync();
+                
+                    emptylistbox(this, e);
+                    Button_GetAllCars_Click(this, e);
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("no item selected.");
+            }
+
+        }
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            var client = new HttpClient();
+
+            int card = rnd.Next(100);
+            if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+            {
+                Console.WriteLine("Please input all fields!");
+            }
+            else
+            {
+                CarInfo newCar = new CarInfo(card, TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
+                Console.WriteLine(newCar.ToString());
+                var requestContent = JsonContent.Create(newCar);
+
+                var response = await client.PostAsync("http://localhost:3000/inventory/addcar", requestContent);
+                var contents = await response.Content.ReadAsStringAsync();
+                emptylistbox(this, e);
+                Button_GetAllCars_Click(this, e);
+            }
+        }
+
+        private void emptylistbox(object sender, EventArgs e)
+        {
+            List_CarResults.Items.Clear();
         }
     }
 }

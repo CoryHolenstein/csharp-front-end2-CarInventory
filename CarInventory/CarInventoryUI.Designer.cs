@@ -42,6 +42,7 @@ namespace CarInventory
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Button_AddCar = new System.Windows.Forms.Button();
+            this.Button_RemoveCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -159,12 +160,23 @@ namespace CarInventory
             this.Button_AddCar.UseVisualStyleBackColor = true;
             this.Button_AddCar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Button_RemoveCar
+            // 
+            this.Button_RemoveCar.Location = new System.Drawing.Point(412, 366);
+            this.Button_RemoveCar.Name = "Button_RemoveCar";
+            this.Button_RemoveCar.Size = new System.Drawing.Size(109, 55);
+            this.Button_RemoveCar.TabIndex = 13;
+            this.Button_RemoveCar.Text = "Remove Car";
+            this.Button_RemoveCar.UseVisualStyleBackColor = true;
+            this.Button_RemoveCar.Click += new System.EventHandler(this.Button_RemoveCar_Click);
+            // 
             // CarInventoryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1200, 657);
+            this.Controls.Add(this.Button_RemoveCar);
             this.Controls.Add(this.Button_AddCar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -202,6 +214,7 @@ namespace CarInventory
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Button_AddCar;
+        private System.Windows.Forms.Button Button_RemoveCar;
     }
 }
 
