@@ -1,7 +1,6 @@
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\CarInventory.exe.config
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\CarInventory.exe
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\CarInventory.pdb
-C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.AssemblyReference.cache
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.CarInventoryUI.resources
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.Properties.Resources.resources
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.GenerateResource.cache
