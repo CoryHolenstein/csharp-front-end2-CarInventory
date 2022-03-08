@@ -39,6 +39,7 @@ namespace LoginUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Label_LoginText
@@ -88,7 +89,7 @@ namespace LoginUI
             // 
             // Button_LoginButton
             // 
-            this.Button_LoginButton.Location = new System.Drawing.Point(555, 382);
+            this.Button_LoginButton.Location = new System.Drawing.Point(557, 365);
             this.Button_LoginButton.Name = "Button_LoginButton";
             this.Button_LoginButton.Size = new System.Drawing.Size(87, 33);
             this.Button_LoginButton.TabIndex = 5;
@@ -139,12 +140,23 @@ namespace LoginUI
             this.label3.TabIndex = 9;
             this.label3.Text = "pass";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(557, 441);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 73);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Register New Account";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginFormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1200, 624);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -176,6 +188,7 @@ namespace LoginUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

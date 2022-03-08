@@ -118,6 +118,10 @@
       <Project>{237232AA-8171-4027-9E86-640D32E1F17F}</Project>
       <Name>CarInventory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LoginUI\LoginUI.csproj">
+      <Project>{782B37EA-7841-4131-8CD4-0BB00E0CE85C}</Project>
+      <Name>LoginUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets')" />

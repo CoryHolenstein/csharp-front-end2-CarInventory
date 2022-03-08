@@ -1,1 +1,1 @@
-
+button on login screen doesnt redirect to register page. 

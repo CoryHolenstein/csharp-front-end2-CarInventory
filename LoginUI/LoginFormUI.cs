@@ -4,11 +4,11 @@ using System.Windows.Forms;
 using System.Net.Http;
 using System.Net.Http.Json;
 using CarInventory;
-
+//using RegisterUI;
 namespace LoginUI
 {
 
- 
+
 
 
     public partial class LoginFormUI : Form
@@ -78,6 +78,16 @@ namespace LoginUI
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            Form registerForm = new Form();
+            ((Control)ActiveForm).Hide();
+//            registerForm = new RegisterFormUI();
+
+            registerForm.Show();
         }
 
         private void Label_LoginResponse_Click(object sender, EventArgs e)
