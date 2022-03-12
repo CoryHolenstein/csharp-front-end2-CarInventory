@@ -54,7 +54,7 @@ namespace LoginUI
             var userInfo = new LoginInfo(username, password);
             var requestContent = JsonContent.Create(userInfo);
 
-            var response = await client.PostAsync("http://localhost:3000/users/login", requestContent);
+            var response = await client.PostAsync("https://localhost:44364/users/login", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
 
        

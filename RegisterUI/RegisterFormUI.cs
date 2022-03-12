@@ -69,12 +69,38 @@ namespace RegisterUI
             var userInfo = new RegisterInfo(username, password, passwordConfirmation);
             var requestContent = JsonContent.Create(userInfo);
 
-            var response = await client.PostAsync("http://localhost:3000/users/register", requestContent);
+            var response = await client.PostAsync("https://localhost:44364/api/Register", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(response);
 
+            var statusCode = (int)response.StatusCode;
 
+            //for entity framework server
+            if (statusCode == 500)
+            {
+                  Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
+                Label_RegisterResponse.Text = "Server Error";
+            } else if (statusCode == 400)
+            {
+                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
+                Label_RegisterResponse.Text = "Username exists already.";
+            } else if (statusCode == 406)
+            {
+                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
+                Label_RegisterResponse.Text = "Passwords must match.";
+            }else if (statusCode == 200)
+            {
+                Label_RegisterResponse.ForeColor = System.Drawing.Color.Green;
+                Label_RegisterResponse.Text = "Account Registered. Redirecting you...";
 
+                Form carInventoryform = new Form();
+                ((Control)ActiveForm).Hide();
+                carInventoryform = new CarInventoryUI();
+                carInventoryform.Show();
+            }
 
+            /*
+             * for node js server
             if (contents.Contains("errormessagePassMatch"))
             {
                 Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
@@ -107,7 +133,7 @@ namespace RegisterUI
                 carInventoryform.Show();
 
             }
-
+            */
         }
     }
 }

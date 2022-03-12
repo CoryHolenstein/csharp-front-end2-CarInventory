@@ -33,3 +33,5 @@ C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.CopyComplete
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.exe
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.pdb
+C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.AssemblyReference.cache
+C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.SuggestedBindingRedirects.cache

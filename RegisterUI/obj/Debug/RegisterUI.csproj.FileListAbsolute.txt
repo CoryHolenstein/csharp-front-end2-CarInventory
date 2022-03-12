@@ -37,3 +37,4 @@ C:\Users\Coryb\VS projects\sharp-front-end2\RegisterUI\obj\Debug\RegisterUI.cspr
 C:\Users\Coryb\VS projects\sharp-front-end2\RegisterUI\obj\Debug\RegisterUI.csproj.CopyComplete
 C:\Users\Coryb\VS projects\sharp-front-end2\RegisterUI\obj\Debug\RegisterUI.exe
 C:\Users\Coryb\VS projects\sharp-front-end2\RegisterUI\obj\Debug\RegisterUI.pdb
+C:\Users\Coryb\VS projects\sharp-front-end2\RegisterUI\obj\Debug\RegisterUI.csproj.SuggestedBindingRedirects.cache

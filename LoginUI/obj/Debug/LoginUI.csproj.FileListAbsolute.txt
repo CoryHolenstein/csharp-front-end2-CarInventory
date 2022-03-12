@@ -63,3 +63,4 @@ C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.Cor
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.CopyComplete
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.exe
 C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.pdb
+C:\Users\Coryb\VS projects\sharp-front-end2\LoginUI\obj\Debug\LoginUI.csproj.SuggestedBindingRedirects.cache
