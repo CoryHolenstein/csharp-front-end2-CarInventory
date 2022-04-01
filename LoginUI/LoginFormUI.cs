@@ -4,7 +4,9 @@ using System.Windows.Forms;
 using System.Net.Http;
 using System.Net.Http.Json;
 using CarInventory;
-//using RegisterUI;
+using Microsoft.AspNetCore.Http;
+
+
 namespace LoginUI
 {
 
@@ -13,8 +15,11 @@ namespace LoginUI
 
     public partial class LoginFormUI : Form
     {
+       
         String username = "",
             password = "";
+
+        const String SessionUser = "";
         public class LoginInfo
         {
             public String username { get; set; }
@@ -54,27 +59,38 @@ namespace LoginUI
             var userInfo = new LoginInfo(username, password);
             var requestContent = JsonContent.Create(userInfo);
 
-            var response = await client.PostAsync("https://localhost:44364/users/login", requestContent);
+            var response = await client.PostAsync("http://localhost:3000/users/login", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
 
-       
 
 
-            if (contents.Contains("errormessage"))
+            var statusCode = (int)response.StatusCode;
+
+            //for entity framework server
+            if (statusCode == 500)
             {
                 Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
-                Label_LoginResponse.Text = "Wrong Username or Password.";
-            } else
+                Label_LoginResponse.Text = "Server Error";
+
+            }
+            else if (statusCode == 400)
             {
-                Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
-                Label_LoginResponse.Text = "Correct! Redirecting you...";
-    
-                
+                 Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
+                 Label_LoginResponse.Text = "User not found or wrong password entered.";
+
+
+            }  
+            else if (statusCode == 200)
+            {
+                 Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
+                 Label_LoginResponse.Text = "Logged in. Redirecting you...";
+
+         //       HttpContext.Session.SetString(SessionUser, "Jarvik");
+                //   Session["someKey1"] = "My Special Value";
                 Form carInventoryform = new Form();
                 ((Control)ActiveForm).Hide();
                 carInventoryform = new CarInventoryUI();
                 carInventoryform.Show();
-
             }
 
 
@@ -83,11 +99,18 @@ namespace LoginUI
         private void button1_Click(object sender, EventArgs e)
         {
             
+
             Form registerForm = new Form();
             ((Control)ActiveForm).Hide();
-//            registerForm = new RegisterFormUI();
+          
+        //    registerForm = new RegisterFormUI();
 
             registerForm.Show();
+        }
+
+        private void LoginFormUI_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Label_LoginResponse_Click(object sender, EventArgs e)

@@ -69,7 +69,7 @@ namespace RegisterUI
             var userInfo = new RegisterInfo(username, password, passwordConfirmation);
             var requestContent = JsonContent.Create(userInfo);
 
-            var response = await client.PostAsync("https://localhost:44364/api/Register", requestContent);
+            var response = await client.PostAsync("http://localhost:3000/users/register", requestContent);
             var contents = await response.Content.ReadAsStringAsync();
             Console.WriteLine(response);
 
@@ -80,15 +80,27 @@ namespace RegisterUI
             {
                   Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
                 Label_RegisterResponse.Text = "Server Error";
+
             } else if (statusCode == 400)
             {
                 Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Username exists already.";
+                Label_RegisterResponse.Text = "Passwords must match and cannot be empty.";
+
+
             } else if (statusCode == 406)
             {
                 Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Passwords must match.";
-            }else if (statusCode == 200)
+                Label_RegisterResponse.Text = "Username exists already.";
+            }
+            else if (statusCode == 411)
+            {
+                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
+                Label_RegisterResponse.Text = "Username and password must be between 6 and 15 characters.";
+
+
+
+            }
+            else if (statusCode == 200)
             {
                 Label_RegisterResponse.ForeColor = System.Drawing.Color.Green;
                 Label_RegisterResponse.Text = "Account Registered. Redirecting you...";
@@ -99,41 +111,6 @@ namespace RegisterUI
                 carInventoryform.Show();
             }
 
-            /*
-             * for node js server
-            if (contents.Contains("errormessagePassMatch"))
-            {
-                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Passwords must match.";
-            } 
-            else if (contents.Contains("errormessageUserExists")) 
-            {
-                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Username exists already.";
-            }
-            else if (contents.Contains("errormessageFields"))
-            {
-                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Please fill out all fields!";
-            }
-            else if (contents.Contains("errormessageLength"))
-            {
-                Label_RegisterResponse.ForeColor = System.Drawing.Color.Red;
-                Label_RegisterResponse.Text = "Usernames and passwords should be atleast 6 characters and at most 15 characters.";
-            }
-            else if (contents.Contains("successResIns"))
-            {
-                Label_RegisterResponse.ForeColor = System.Drawing.Color.Green;
-                Label_RegisterResponse.Text = "Account Registered... Redirecting you.";
-
-
-                Form carInventoryform = new Form();
-                ((Control)ActiveForm).Hide();
-                carInventoryform = new CarInventoryUI();
-                carInventoryform.Show();
-
-            }
-            */
         }
     }
 }

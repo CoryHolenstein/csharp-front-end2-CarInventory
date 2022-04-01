@@ -65,7 +65,7 @@ namespace RegisterUI
             // 
             this.textBox1.Location = new System.Drawing.Point(497, 198);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 26);
+            this.textBox1.Size = new System.Drawing.Size(174, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -82,7 +82,7 @@ namespace RegisterUI
             // 
             this.textBox2.Location = new System.Drawing.Point(497, 266);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 26);
+            this.textBox2.Size = new System.Drawing.Size(177, 26);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -97,17 +97,17 @@ namespace RegisterUI
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(500, 344);
+            this.textBox3.Location = new System.Drawing.Point(497, 344);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 26);
+            this.textBox3.Size = new System.Drawing.Size(174, 26);
             this.textBox3.TabIndex = 6;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(497, 395);
+            this.button1.Location = new System.Drawing.Point(497, 376);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.Size = new System.Drawing.Size(83, 67);
             this.button1.TabIndex = 7;
             this.button1.Text = "Back To Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@ namespace RegisterUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(578, 395);
+            this.button2.Location = new System.Drawing.Point(586, 376);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.Size = new System.Drawing.Size(85, 67);
             this.button2.TabIndex = 8;
             this.button2.Text = "Register Account";
             this.button2.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@ namespace RegisterUI
             // 
             this.Label_RegisterResponse.AutoSize = true;
             this.Label_RegisterResponse.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_RegisterResponse.Location = new System.Drawing.Point(452, 457);
+            this.Label_RegisterResponse.Location = new System.Drawing.Point(393, 478);
             this.Label_RegisterResponse.Name = "Label_RegisterResponse";
             this.Label_RegisterResponse.Size = new System.Drawing.Size(0, 25);
             this.Label_RegisterResponse.TabIndex = 9;

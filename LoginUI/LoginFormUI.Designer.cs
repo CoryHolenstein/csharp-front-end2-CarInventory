@@ -55,24 +55,24 @@ namespace LoginUI
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(512, 237);
+            this.textBox1.Location = new System.Drawing.Point(498, 237);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 26);
+            this.textBox1.Size = new System.Drawing.Size(180, 26);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(512, 333);
+            this.textBox2.Location = new System.Drawing.Point(498, 333);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 26);
+            this.textBox2.Size = new System.Drawing.Size(180, 26);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Label_UsernameInput
             // 
             this.Label_UsernameInput.AutoSize = true;
-            this.Label_UsernameInput.Location = new System.Drawing.Point(518, 205);
+            this.Label_UsernameInput.Location = new System.Drawing.Point(494, 206);
             this.Label_UsernameInput.Name = "Label_UsernameInput";
             this.Label_UsernameInput.Size = new System.Drawing.Size(79, 19);
             this.Label_UsernameInput.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace LoginUI
             // Label_PasswordInput
             // 
             this.Label_PasswordInput.AutoSize = true;
-            this.Label_PasswordInput.Location = new System.Drawing.Point(518, 298);
+            this.Label_PasswordInput.Location = new System.Drawing.Point(494, 300);
             this.Label_PasswordInput.Name = "Label_PasswordInput";
             this.Label_PasswordInput.Size = new System.Drawing.Size(76, 19);
             this.Label_PasswordInput.TabIndex = 4;
@@ -89,9 +89,9 @@ namespace LoginUI
             // 
             // Button_LoginButton
             // 
-            this.Button_LoginButton.Location = new System.Drawing.Point(557, 365);
+            this.Button_LoginButton.Location = new System.Drawing.Point(591, 365);
             this.Button_LoginButton.Name = "Button_LoginButton";
-            this.Button_LoginButton.Size = new System.Drawing.Size(87, 33);
+            this.Button_LoginButton.Size = new System.Drawing.Size(87, 73);
             this.Button_LoginButton.TabIndex = 5;
             this.Button_LoginButton.Text = "Login";
             this.Button_LoginButton.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@ namespace LoginUI
             this.Label_LoginResponse.AutoSize = true;
             this.Label_LoginResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
-            this.Label_LoginResponse.Location = new System.Drawing.Point(461, 435);
+            this.Label_LoginResponse.Location = new System.Drawing.Point(405, 467);
             this.Label_LoginResponse.Name = "Label_LoginResponse";
             this.Label_LoginResponse.Size = new System.Drawing.Size(0, 29);
             this.Label_LoginResponse.TabIndex = 6;
@@ -142,7 +142,7 @@ namespace LoginUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(557, 441);
+            this.button1.Location = new System.Drawing.Point(498, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 73);
             this.button1.TabIndex = 10;
@@ -171,6 +171,7 @@ namespace LoginUI
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginFormUI";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginFormUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

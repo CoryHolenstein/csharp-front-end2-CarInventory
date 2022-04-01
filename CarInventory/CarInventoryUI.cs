@@ -76,6 +76,50 @@ namespace CarInventory
 			}
 		}
         }
+
+        private async void Button_UpdateCar_Click(object sender, EventArgs e)
+        {
+            
+           
+            if (List_CarResults.SelectedIndex >= 0)
+            {
+                Console.WriteLine("selected item");
+                //  Console.WriteLine(List_CarResults.SelectedItem.ToString());
+                // if (List_CarResults.SelectedItem.ToString().Contains("InventoryID"))
+                if (int.TryParse(List_CarResults.SelectedItem.ToString(), out int value))
+                {
+                    //call
+                    Console.WriteLine("api call time baby");
+                    var client = new HttpClient();
+
+
+                    var inventoryID = List_CarResults.SelectedItem.ToString();
+
+                    if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+                    {
+                        Console.WriteLine("Please input all fields!");
+                    }
+                    else
+                    {
+                        CarInfo updateCar = new CarInfo(int.Parse(inventoryID), TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
+                        var requestContent = JsonContent.Create(updateCar);
+                        var response = await client.PostAsync("http://localhost:3000/inventory/updatecar", requestContent);
+                        var contents = await response.Content.ReadAsStringAsync();
+                        emptylistbox(this, e);
+                      Button_GetAllCars_Click(this, e);
+                    }
+          
+                    //int inventoryIDToSend = int.Parse(inventoryID);
+
+
+                }
+            }
+            else if (List_CarResults.SelectedIndex < 0)
+            {
+                Console.WriteLine("no item selected.");
+            }
+        }
+
         private async void Button_RemoveCar_Click(object sender, EventArgs e)
         {
             if (List_CarResults.SelectedIndex >= 0)
