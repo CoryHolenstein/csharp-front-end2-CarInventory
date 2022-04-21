@@ -7,6 +7,7 @@ using CarInventory;
 
 using Microsoft.AspNetCore.Http;
 using System.Web;
+using RegisterUI;
 
 namespace LoginUI
 {
@@ -67,7 +68,7 @@ namespace LoginUI
 
             var statusCode = (int)response.StatusCode;
 
-            //for entity framework server
+        
             if (statusCode == 500)
             {
                 Label_LoginResponse.ForeColor = System.Drawing.Color.Red;
@@ -89,12 +90,12 @@ namespace LoginUI
                 //       HttpContext.Session.SetString(SessionUser, "Jarvik");
                 //   Session["someKey1"] = "My Special Value";
                 //    localStorage.setItem("username", "");
-                HttpCookie cookie = new HttpCookie("username");
-                cookie.Value = textBox2.Text;
-                cookie.Expires= DateTime.Now.AddDays(1);
+        //        HttpCookie cookie = new HttpCookie("username");
+          //      cookie.Value = textBox2.Text;
+           //     cookie.Expires= DateTime.Now.AddDays(1);
                 Form carInventoryform = new Form();
                 ((Control)ActiveForm).Hide();
-                carInventoryform = new CarInventoryUI();
+                carInventoryform = new CarInventory.CarInventoryUI();
                 carInventoryform.Show();
             }
 
@@ -105,13 +106,10 @@ namespace LoginUI
         {
             
 
-           // Form registerForm = new Form();
-          //  RegisterFormUI register = new RegisterFormUI();
-        //    ((Control)ActiveForm).Hide();
-            
-       
-
-       //     registerForm.Show();
+            Form registerUI = new Form();
+            ((Control)ActiveForm).Hide();
+            registerUI = new RegisterFormUI();
+            registerUI.Show();
         }
 
         private void LoginFormUI_Load(object sender, EventArgs e)

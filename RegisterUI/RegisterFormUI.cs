@@ -107,7 +107,7 @@ namespace RegisterUI
 
                 Form carInventoryform = new Form();
                 ((Control)ActiveForm).Hide();
-                carInventoryform = new CarInventoryUI();
+                carInventoryform = new CarInventory.CarInventoryUI();
                 carInventoryform.Show();
             }
 

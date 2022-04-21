@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Web;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Collections.Generic;
@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Web.Script.Serialization;
+
 
 namespace CarInventory
 {
@@ -45,6 +46,7 @@ namespace CarInventory
         public CarInventoryUI()
         {
             InitializeComponent();
+       
         }
 
         private void List_CarResults_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,8 +54,14 @@ namespace CarInventory
 
         }
 
+    
+
         private async void Button_GetAllCars_Click(object sender, EventArgs e)
         {
+            HttpCookie cookie;
+          
+            //label7.Text = 
+
             var client = new HttpClient();
 
             var carInfo = new CarInfo(inventoryID, carBrand, carName,carColor,carType);
