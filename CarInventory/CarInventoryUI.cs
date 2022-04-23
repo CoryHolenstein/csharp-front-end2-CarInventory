@@ -190,5 +190,21 @@ namespace CarInventory
         {
             List_CarResults.Items.Clear();
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            Button_GetAllCars_Click(this, e);
+        }
+
+        protected void Button_UpdateCar_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            label8.Text = "Ok";
+            ToolTip1.SetToolTip(this.Button_UpdateCar, this.Button_UpdateCar.Text);
+        }
+        protected void Button_UpdateCar_MouseLeave(object sender, EventArgs e)
+        {
+            label8.Text = "okokokk";
+        }
     }
 }

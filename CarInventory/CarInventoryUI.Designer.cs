@@ -45,6 +45,7 @@ namespace CarInventory
             this.Button_RemoveCar = new System.Windows.Forms.Button();
             this.Button_UpdateCar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -185,11 +186,21 @@ namespace CarInventory
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1004, 101);
+            this.label7.Font = new System.Drawing.Font("High Tower Text", 16F);
+            this.label7.Location = new System.Drawing.Point(1003, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 19);
+            this.label7.Size = new System.Drawing.Size(0, 26);
             this.label7.TabIndex = 15;
-            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("High Tower Text", 20F);
+            this.label8.Location = new System.Drawing.Point(971, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 32);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Logged in as:";
             // 
             // CarInventoryUI
             // 
@@ -197,6 +208,7 @@ namespace CarInventory
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1200, 657);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Button_UpdateCar);
             this.Controls.Add(this.Button_RemoveCar);
@@ -240,6 +252,7 @@ namespace CarInventory
         private System.Windows.Forms.Button Button_RemoveCar;
         private System.Windows.Forms.Button Button_UpdateCar;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
