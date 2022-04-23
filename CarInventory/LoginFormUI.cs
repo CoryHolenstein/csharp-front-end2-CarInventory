@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Net.Http;
 using System.Net.Http.Json;
 using CarInventory;
-
+using static UserInformation.UserInformation;
 using Microsoft.AspNetCore.Http;
 using System.Web;
 using RegisterUI;
@@ -87,12 +87,7 @@ namespace LoginUI
                  Label_LoginResponse.ForeColor = System.Drawing.Color.Green;
                  Label_LoginResponse.Text = "Logged in. Redirecting you...";
 
-                //       HttpContext.Session.SetString(SessionUser, "Jarvik");
-                //   Session["someKey1"] = "My Special Value";
-                //    localStorage.setItem("username", "");
-        //        HttpCookie cookie = new HttpCookie("username");
-          //      cookie.Value = textBox2.Text;
-           //     cookie.Expires= DateTime.Now.AddDays(1);
+                Stored_UserName = userInfo.username;
                 Form carInventoryform = new Form();
                 ((Control)ActiveForm).Hide();
                 carInventoryform = new CarInventory.CarInventoryUI();

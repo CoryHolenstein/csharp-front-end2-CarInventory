@@ -84,4 +84,5 @@ C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\System.Securi
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\System.Security.Cryptography.Xml.xml
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\System.Security.Permissions.xml
 C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\CarInventory.csproj.App.config
+C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\LoginUI.LoginFormUI.resources
+C:\Users\Coryb\VS projects\sharp-front-end2\CarInventory\obj\Debug\RegisterUI.RegisterFormUI.resources

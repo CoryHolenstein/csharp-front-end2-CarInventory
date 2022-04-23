@@ -1,7 +1,7 @@
 ﻿using CarInventory;
 using System;
 using System.Windows.Forms;
-
+using static UserInformation.UserInformation;
 using System.Net.Http;
 using System.Net.Http.Json;
 using LoginUI;
@@ -104,7 +104,7 @@ namespace RegisterUI
             {
                 Label_RegisterResponse.ForeColor = System.Drawing.Color.Green;
                 Label_RegisterResponse.Text = "Account Registered. Redirecting you...";
-
+                Stored_UserName = userInfo.username;
                 Form carInventoryform = new Form();
                 ((Control)ActiveForm).Hide();
                 carInventoryform = new CarInventory.CarInventoryUI();

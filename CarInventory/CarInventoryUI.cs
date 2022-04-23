@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Web.Script.Serialization;
-
+using static UserInformation.UserInformation;
 
 namespace CarInventory
 {
@@ -58,9 +58,9 @@ namespace CarInventory
 
         private async void Button_GetAllCars_Click(object sender, EventArgs e)
         {
-            HttpCookie cookie;
-          
-            //label7.Text = 
+
+
+            label7.Text = Stored_UserName;
 
             var client = new HttpClient();
 
@@ -87,7 +87,7 @@ namespace CarInventory
 
         private async void Button_UpdateCar_Click(object sender, EventArgs e)
         {
-            
+           
            
             if (List_CarResults.SelectedIndex >= 0)
             {
@@ -184,6 +184,7 @@ namespace CarInventory
                 Button_GetAllCars_Click(this, e);
             }
         }
+
 
         private void emptylistbox(object sender, EventArgs e)
         {
