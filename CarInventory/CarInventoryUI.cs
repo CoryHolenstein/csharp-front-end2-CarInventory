@@ -10,6 +10,8 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Web.Script.Serialization;
 using static UserInformation.UserInformation;
+using System.Timers;
+using System.Diagnostics;
 
 namespace CarInventory
 {
@@ -106,6 +108,7 @@ namespace CarInventory
                     if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
                     {
                         Console.WriteLine("Please input all fields!");
+                        Initiate_UserError_LabelTimer(this, e, "Please input all fields!");
                     }
                     else
                     {
@@ -162,6 +165,7 @@ namespace CarInventory
             }
 
         }
+        //addcar button
         private async void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -171,6 +175,7 @@ namespace CarInventory
             if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
             {
                 Console.WriteLine("Please input all fields!");
+                Initiate_UserError_LabelTimer(this, e, "Please input all fields!");
             }
             else
             {
@@ -194,17 +199,31 @@ namespace CarInventory
         {
             base.OnLoad(e);
             Button_GetAllCars_Click(this, e);
+           
+
         }
 
-        protected void Button_UpdateCar_MouseHover(object sender, EventArgs e)
+
+        private void Initiate_UserError_LabelTimer (object sender, EventArgs e, String message)
         {
-            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            label8.Text = "Ok";
-            ToolTip1.SetToolTip(this.Button_UpdateCar, this.Button_UpdateCar.Text);
+            System.Timers.Timer timer = new System.Timers.Timer();
+
+            UserError_Label.Text = message;
+
+            timer.Interval = 5000; // specify interval time as you want
+            timer.Enabled = true;
+            timer.Start();
+            Console.WriteLine(timer.ToString() + " " + timer.Enabled + " " + timer.Interval );
+            timer.Elapsed += OnTimedEvent;
+            timer.Dispose();
+
         }
-        protected void Button_UpdateCar_MouseLeave(object sender, EventArgs e)
+
+        private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
-            label8.Text = "okokokk";
+            Console.WriteLine("We made it here?!?!?!?!?!?!?!?!?!?!?!");
+            UserError_Label.Text = "";
         }
+    
     }
 }
