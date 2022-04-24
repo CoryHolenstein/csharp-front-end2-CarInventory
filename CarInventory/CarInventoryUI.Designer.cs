@@ -50,6 +50,10 @@ namespace CarInventory
             this.toolTip_updateCar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip_RemoveCar = new System.Windows.Forms.ToolTip(this.components);
             this.UserError_Label = new System.Windows.Forms.Label();
+            this.AccountSettings_Button = new System.Windows.Forms.Button();
+            this.ClearErrors_Button = new System.Windows.Forms.Button();
+            this.toolTip_GetInventory = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_AddCar = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -80,6 +84,7 @@ namespace CarInventory
             this.Button_GetAllCars.Size = new System.Drawing.Size(105, 56);
             this.Button_GetAllCars.TabIndex = 2;
             this.Button_GetAllCars.Text = "Get Inventory";
+            this.toolTip_updateCar.SetToolTip(this.Button_GetAllCars, "Manually update the Inventory List. Probably not necessary.");
             this.Button_GetAllCars.UseVisualStyleBackColor = true;
             this.Button_GetAllCars.Click += new System.EventHandler(this.Button_GetAllCars_Click);
             // 
@@ -164,6 +169,7 @@ namespace CarInventory
             this.Button_AddCar.Size = new System.Drawing.Size(112, 55);
             this.Button_AddCar.TabIndex = 12;
             this.Button_AddCar.Text = "Add Car";
+            this.toolTip_AddCar.SetToolTip(this.Button_AddCar, "Fill out the text boxes and add a car. An ID will be randomly generated for it. ");
             this.Button_AddCar.UseVisualStyleBackColor = true;
             this.Button_AddCar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -224,11 +230,43 @@ namespace CarInventory
             // UserError_Label
             // 
             this.UserError_Label.AutoSize = true;
-            this.UserError_Label.Location = new System.Drawing.Point(977, 416);
+            this.UserError_Label.Location = new System.Drawing.Point(973, 493);
             this.UserError_Label.Name = "UserError_Label";
-            this.UserError_Label.Size = new System.Drawing.Size(47, 19);
+            this.UserError_Label.Size = new System.Drawing.Size(0, 19);
             this.UserError_Label.TabIndex = 17;
-            this.UserError_Label.Text = "label9";
+            // 
+            // AccountSettings_Button
+            // 
+            this.AccountSettings_Button.Location = new System.Drawing.Point(977, 228);
+            this.AccountSettings_Button.Name = "AccountSettings_Button";
+            this.AccountSettings_Button.Size = new System.Drawing.Size(151, 45);
+            this.AccountSettings_Button.TabIndex = 18;
+            this.AccountSettings_Button.Text = "Account Settings";
+            this.AccountSettings_Button.UseVisualStyleBackColor = true;
+            this.AccountSettings_Button.Click += new System.EventHandler(this.AccountSettings_Button_Click);
+            // 
+            // ClearErrors_Button
+            // 
+            this.ClearErrors_Button.Location = new System.Drawing.Point(1008, 577);
+            this.ClearErrors_Button.Name = "ClearErrors_Button";
+            this.ClearErrors_Button.Size = new System.Drawing.Size(91, 55);
+            this.ClearErrors_Button.TabIndex = 19;
+            this.ClearErrors_Button.Text = "Clear Error List";
+            this.ClearErrors_Button.UseVisualStyleBackColor = true;
+            this.ClearErrors_Button.Visible = false;
+            this.ClearErrors_Button.Click += new System.EventHandler(this.ClearErrors_Button_Click);
+            // 
+            // toolTip_GetInventory
+            // 
+            this.toolTip_GetInventory.AutoPopDelay = 20000;
+            this.toolTip_GetInventory.InitialDelay = 500;
+            this.toolTip_GetInventory.ReshowDelay = 100;
+            // 
+            // toolTip_AddCar
+            // 
+            this.toolTip_AddCar.AutoPopDelay = 20000;
+            this.toolTip_AddCar.InitialDelay = 500;
+            this.toolTip_AddCar.ReshowDelay = 100;
             // 
             // CarInventoryUI
             // 
@@ -236,6 +274,8 @@ namespace CarInventory
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1200, 657);
+            this.Controls.Add(this.ClearErrors_Button);
+            this.Controls.Add(this.AccountSettings_Button);
             this.Controls.Add(this.UserError_Label);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -285,6 +325,10 @@ namespace CarInventory
         private System.Windows.Forms.ToolTip toolTip_updateCar;
         private System.Windows.Forms.ToolTip toolTip_RemoveCar;
         private System.Windows.Forms.Label UserError_Label;
+        private System.Windows.Forms.Button AccountSettings_Button;
+        private System.Windows.Forms.Button ClearErrors_Button;
+        private System.Windows.Forms.ToolTip toolTip_GetInventory;
+        private System.Windows.Forms.ToolTip toolTip_AddCar;
     }
 }
 

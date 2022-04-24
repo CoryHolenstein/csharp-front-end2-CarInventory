@@ -1,3 +1,5 @@
 routing.. pages don't route - done
 update existing index.. so if you select an index of 3, you can update 3's color. - updating done 
 register page - done
+Account settings 
+Personal cars???

@@ -1,2 +1,3 @@
 button on login screen doesnt redirect to register page. - fixed
-timer doesn't work on updating the error label.
+timer doesn't work on updating the error label. - screw the timer
+

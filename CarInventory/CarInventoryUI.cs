@@ -108,7 +108,7 @@ namespace CarInventory
                     if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
                     {
                         Console.WriteLine("Please input all fields!");
-                        Initiate_UserError_LabelTimer(this, e, "Please input all fields!");
+                        Create_Error_List("Please input all fields!");
                     }
                     else
                     {
@@ -131,6 +131,7 @@ namespace CarInventory
             }
         }
 
+        //remvoe car button, works by clicking on the car ID in the list and clicking remove. 
         private async void Button_RemoveCar_Click(object sender, EventArgs e)
         {
             if (List_CarResults.SelectedIndex >= 0)
@@ -169,13 +170,15 @@ namespace CarInventory
         private async void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
+            int card = rnd.Next(100);
             var client = new HttpClient();
 
-            int card = rnd.Next(100);
+            
             if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
             {
                 Console.WriteLine("Please input all fields!");
-                Initiate_UserError_LabelTimer(this, e, "Please input all fields!");
+                Create_Error_List("Please input all fields!");
+
             }
             else
             {
@@ -195,15 +198,50 @@ namespace CarInventory
         {
             List_CarResults.Items.Clear();
         }
+
+        private void AccountSettings_Button_Click(object sender, EventArgs e)
+        {
+            //navigate to account settings form TBA
+        }
+
+        //on page load, call inventory 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             Button_GetAllCars_Click(this, e);
-           
 
         }
 
+        //We use this to clear the errors list and set the button invisible
+        private void ClearErrors_Button_Click(object sender, EventArgs e)
+        {
+            ClearErrors_Button.Visible = false;
+            UserError_Label.Text = "";
+        }
 
+
+        //When an error happens, we add it to the error list and make the clear errors button visible!
+        //if the amount of characters in the label are over 75, we clear the label first to avoid piling up of error messages.
+        private void Create_Error_List(String errorMessage)
+        {
+            int charCount = 0;
+            foreach (char c in UserError_Label.Text)
+            {
+                charCount++;
+            }
+            if (charCount >= 75)
+            {
+                UserError_Label.Text = "";
+            }
+
+
+            UserError_Label.Text += errorMessage + "\n";
+
+            ClearErrors_Button.Visible = true;
+        }
+
+        //was going to use this timer to auto clear error messages for user, but it just created more problems and is not the best practice
+        /*
         private void Initiate_UserError_LabelTimer (object sender, EventArgs e, String message)
         {
             System.Timers.Timer timer = new System.Timers.Timer();
@@ -215,15 +253,21 @@ namespace CarInventory
             timer.Start();
             Console.WriteLine(timer.ToString() + " " + timer.Enabled + " " + timer.Interval );
             timer.Elapsed += OnTimedEvent;
-            timer.Dispose();
+      
 
         }
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
-            Console.WriteLine("We made it here?!?!?!?!?!?!?!?!?!?!?!");
-            UserError_Label.Text = "";
+            Console.WriteLine("Test");
+            if (UserError_Label.InvokeRequired)
+            {
+                UserError_Label.Invoke(new MethodInvoker(delegate { UserError_Label.Text = ""; }));
+            }
+
+       
         }
+        */
     
     }
 }
