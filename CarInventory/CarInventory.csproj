@@ -179,11 +179,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountSettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSettingsUI.Designer.cs">
+      <DependentUpon>AccountSettingsUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarInventoryUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarInventoryUI.Designer.cs">
       <DependentUpon>CarInventoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordUI.Designer.cs">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginFormUI.cs">
       <SubType>Form</SubType>
@@ -200,8 +212,14 @@
       <DependentUpon>RegisterFormUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInformation\UserInformation.cs" />
+    <EmbeddedResource Include="AccountSettingsUI.resx">
+      <DependentUpon>AccountSettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarInventoryUI.resx">
       <DependentUpon>CarInventoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordUI.resx">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFormUI.resx">
       <DependentUpon>LoginFormUI.cs</DependentUpon>
