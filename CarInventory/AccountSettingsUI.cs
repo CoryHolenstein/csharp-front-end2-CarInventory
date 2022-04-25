@@ -23,8 +23,8 @@ namespace CarInventory
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            Username_Label.Text = Stored_UserName;
-            Password_Label.Text = "***";
+            label_Username.Text = Stored_UserName;
+            label_Password.Text = "***";
 
         }
 

@@ -31,16 +31,16 @@ namespace LoginUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFormUI));
             this.Label_LoginText = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Label_UsernameInput = new System.Windows.Forms.Label();
-            this.Label_PasswordInput = new System.Windows.Forms.Label();
+            this.textbox_Username = new System.Windows.Forms.TextBox();
+            this.textbox_Password = new System.Windows.Forms.TextBox();
+            this.label_UsernameIdentifier = new System.Windows.Forms.Label();
+            this.label_PasswordIdentifier = new System.Windows.Forms.Label();
             this.Button_LoginButton = new System.Windows.Forms.Button();
             this.Label_LoginResponse = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_RegisterRedirect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Label_LoginText
@@ -54,39 +54,39 @@ namespace LoginUI
             this.Label_LoginText.TabIndex = 0;
             this.Label_LoginText.Text = "Login";
             // 
-            // textBox1
+            // textbox_Username
             // 
-            this.textBox1.Location = new System.Drawing.Point(498, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 26);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textbox_Username.Location = new System.Drawing.Point(498, 237);
+            this.textbox_Username.Name = "textbox_Username";
+            this.textbox_Username.Size = new System.Drawing.Size(180, 26);
+            this.textbox_Username.TabIndex = 1;
+            this.textbox_Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textbox_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(498, 333);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 26);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textbox_Password.Location = new System.Drawing.Point(498, 333);
+            this.textbox_Password.Name = "textbox_Password";
+            this.textbox_Password.Size = new System.Drawing.Size(180, 26);
+            this.textbox_Password.TabIndex = 2;
+            this.textbox_Password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // Label_UsernameInput
+            // label_UsernameIdentifier
             // 
-            this.Label_UsernameInput.AutoSize = true;
-            this.Label_UsernameInput.Location = new System.Drawing.Point(494, 206);
-            this.Label_UsernameInput.Name = "Label_UsernameInput";
-            this.Label_UsernameInput.Size = new System.Drawing.Size(79, 19);
-            this.Label_UsernameInput.TabIndex = 3;
-            this.Label_UsernameInput.Text = "Username:";
+            this.label_UsernameIdentifier.AutoSize = true;
+            this.label_UsernameIdentifier.Location = new System.Drawing.Point(494, 206);
+            this.label_UsernameIdentifier.Name = "label_UsernameIdentifier";
+            this.label_UsernameIdentifier.Size = new System.Drawing.Size(79, 19);
+            this.label_UsernameIdentifier.TabIndex = 3;
+            this.label_UsernameIdentifier.Text = "Username:";
             // 
-            // Label_PasswordInput
+            // label_PasswordIdentifier
             // 
-            this.Label_PasswordInput.AutoSize = true;
-            this.Label_PasswordInput.Location = new System.Drawing.Point(494, 300);
-            this.Label_PasswordInput.Name = "Label_PasswordInput";
-            this.Label_PasswordInput.Size = new System.Drawing.Size(76, 19);
-            this.Label_PasswordInput.TabIndex = 4;
-            this.Label_PasswordInput.Text = "Password:";
+            this.label_PasswordIdentifier.AutoSize = true;
+            this.label_PasswordIdentifier.Location = new System.Drawing.Point(494, 300);
+            this.label_PasswordIdentifier.Name = "label_PasswordIdentifier";
+            this.label_PasswordIdentifier.Size = new System.Drawing.Size(76, 19);
+            this.label_PasswordIdentifier.TabIndex = 4;
+            this.label_PasswordIdentifier.Text = "Password:";
             // 
             // Button_LoginButton
             // 
@@ -135,21 +135,21 @@ namespace LoginUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Tan;
-            this.label3.Location = new System.Drawing.Point(791, 333);
+            this.label3.Location = new System.Drawing.Point(778, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 22);
             this.label3.TabIndex = 9;
             this.label3.Text = "password";
             // 
-            // button1
+            // button_RegisterRedirect
             // 
-            this.button1.Location = new System.Drawing.Point(498, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 73);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Register New Account";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_RegisterRedirect.Location = new System.Drawing.Point(498, 365);
+            this.button_RegisterRedirect.Name = "button_RegisterRedirect";
+            this.button_RegisterRedirect.Size = new System.Drawing.Size(87, 73);
+            this.button_RegisterRedirect.TabIndex = 10;
+            this.button_RegisterRedirect.Text = "Register New Account";
+            this.button_RegisterRedirect.UseVisualStyleBackColor = true;
+            this.button_RegisterRedirect.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginFormUI
             // 
@@ -157,16 +157,16 @@ namespace LoginUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1200, 624);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_RegisterRedirect);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Label_LoginResponse);
             this.Controls.Add(this.Button_LoginButton);
-            this.Controls.Add(this.Label_PasswordInput);
-            this.Controls.Add(this.Label_UsernameInput);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label_PasswordIdentifier);
+            this.Controls.Add(this.label_UsernameIdentifier);
+            this.Controls.Add(this.textbox_Password);
+            this.Controls.Add(this.textbox_Username);
             this.Controls.Add(this.Label_LoginText);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,16 +183,16 @@ namespace LoginUI
         #endregion
 
         private System.Windows.Forms.Label Label_LoginText;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label Label_UsernameInput;
-        private System.Windows.Forms.Label Label_PasswordInput;
+        private System.Windows.Forms.TextBox textbox_Username;
+        private System.Windows.Forms.TextBox textbox_Password;
+        private System.Windows.Forms.Label label_UsernameIdentifier;
+        private System.Windows.Forms.Label label_PasswordIdentifier;
         private System.Windows.Forms.Button Button_LoginButton;
         private System.Windows.Forms.Label Label_LoginResponse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_RegisterRedirect;
     }
 }
 

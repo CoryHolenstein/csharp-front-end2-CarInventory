@@ -32,27 +32,27 @@ namespace CarInventory
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarInventoryUI));
             this.label1 = new System.Windows.Forms.Label();
-            this.List_CarResults = new System.Windows.Forms.ListBox();
-            this.Button_GetAllCars = new System.Windows.Forms.Button();
-            this.TextBox_CarBrand = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TextBox_CarName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TextBox_CarColor = new System.Windows.Forms.TextBox();
-            this.TextBox_CarType = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Button_AddCar = new System.Windows.Forms.Button();
-            this.Button_RemoveCar = new System.Windows.Forms.Button();
-            this.Button_UpdateCar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.list_CarResults = new System.Windows.Forms.ListBox();
+            this.button_GetAllCars = new System.Windows.Forms.Button();
+            this.textbox_CarBrand = new System.Windows.Forms.TextBox();
+            this.label_AddCarIdentifier = new System.Windows.Forms.Label();
+            this.label_CarBrandIdentifier = new System.Windows.Forms.Label();
+            this.textbox_CarName = new System.Windows.Forms.TextBox();
+            this.label_CarNameIdentifier = new System.Windows.Forms.Label();
+            this.textbox_CarColor = new System.Windows.Forms.TextBox();
+            this.textbox_CarType = new System.Windows.Forms.TextBox();
+            this.label_CarColorIdentifier = new System.Windows.Forms.Label();
+            this.label_CarTypeIdentifier = new System.Windows.Forms.Label();
+            this.button_AddCar = new System.Windows.Forms.Button();
+            this.button_RemoveCar = new System.Windows.Forms.Button();
+            this.button_UpdateCar = new System.Windows.Forms.Button();
+            this.label_ActiveUsername = new System.Windows.Forms.Label();
+            this.label_ActiveUserIdentifier = new System.Windows.Forms.Label();
             this.toolTip_updateCar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip_RemoveCar = new System.Windows.Forms.ToolTip(this.components);
             this.UserError_Label = new System.Windows.Forms.Label();
-            this.AccountSettings_Button = new System.Windows.Forms.Button();
-            this.ClearErrors_Button = new System.Windows.Forms.Button();
+            this.button_AccountSettings = new System.Windows.Forms.Button();
+            this.button_ClearErrors = new System.Windows.Forms.Button();
             this.toolTip_GetInventory = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip_AddCar = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
@@ -67,153 +67,153 @@ namespace CarInventory
             this.label1.TabIndex = 0;
             this.label1.Text = "Car Inventory";
             // 
-            // List_CarResults
+            // list_CarResults
             // 
-            this.List_CarResults.BackColor = System.Drawing.Color.Silver;
-            this.List_CarResults.FormattingEnabled = true;
-            this.List_CarResults.ItemHeight = 19;
-            this.List_CarResults.Location = new System.Drawing.Point(239, 52);
-            this.List_CarResults.Name = "List_CarResults";
-            this.List_CarResults.Size = new System.Drawing.Size(661, 308);
-            this.List_CarResults.TabIndex = 1;
-            this.List_CarResults.SelectedIndexChanged += new System.EventHandler(this.List_CarResults_SelectedIndexChanged);
+            this.list_CarResults.BackColor = System.Drawing.Color.Silver;
+            this.list_CarResults.FormattingEnabled = true;
+            this.list_CarResults.ItemHeight = 19;
+            this.list_CarResults.Location = new System.Drawing.Point(239, 52);
+            this.list_CarResults.Name = "list_CarResults";
+            this.list_CarResults.Size = new System.Drawing.Size(661, 308);
+            this.list_CarResults.TabIndex = 1;
+            this.list_CarResults.SelectedIndexChanged += new System.EventHandler(this.List_CarResults_SelectedIndexChanged);
             // 
-            // Button_GetAllCars
+            // button_GetAllCars
             // 
-            this.Button_GetAllCars.Location = new System.Drawing.Point(469, 367);
-            this.Button_GetAllCars.Name = "Button_GetAllCars";
-            this.Button_GetAllCars.Size = new System.Drawing.Size(105, 56);
-            this.Button_GetAllCars.TabIndex = 2;
-            this.Button_GetAllCars.Text = "Get Inventory";
-            this.toolTip_updateCar.SetToolTip(this.Button_GetAllCars, "Manually update the Inventory List. Probably not necessary.");
-            this.Button_GetAllCars.UseVisualStyleBackColor = true;
-            this.Button_GetAllCars.Click += new System.EventHandler(this.Button_GetAllCars_Click);
+            this.button_GetAllCars.Location = new System.Drawing.Point(469, 367);
+            this.button_GetAllCars.Name = "button_GetAllCars";
+            this.button_GetAllCars.Size = new System.Drawing.Size(105, 56);
+            this.button_GetAllCars.TabIndex = 2;
+            this.button_GetAllCars.Text = "Get Inventory";
+            this.toolTip_updateCar.SetToolTip(this.button_GetAllCars, "Manually update the Inventory List. Probably not necessary.");
+            this.button_GetAllCars.UseVisualStyleBackColor = true;
+            this.button_GetAllCars.Click += new System.EventHandler(this.Button_GetAllCars_Click);
             // 
-            // TextBox_CarBrand
+            // textbox_CarBrand
             // 
-            this.TextBox_CarBrand.Location = new System.Drawing.Point(239, 515);
-            this.TextBox_CarBrand.Name = "TextBox_CarBrand";
-            this.TextBox_CarBrand.Size = new System.Drawing.Size(118, 26);
-            this.TextBox_CarBrand.TabIndex = 3;
+            this.textbox_CarBrand.Location = new System.Drawing.Point(239, 515);
+            this.textbox_CarBrand.Name = "textbox_CarBrand";
+            this.textbox_CarBrand.Size = new System.Drawing.Size(118, 26);
+            this.textbox_CarBrand.TabIndex = 3;
             // 
-            // label2
+            // label_AddCarIdentifier
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(512, 459);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Add New Car";
+            this.label_AddCarIdentifier.AutoSize = true;
+            this.label_AddCarIdentifier.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_AddCarIdentifier.Location = new System.Drawing.Point(512, 459);
+            this.label_AddCarIdentifier.Name = "label_AddCarIdentifier";
+            this.label_AddCarIdentifier.Size = new System.Drawing.Size(131, 25);
+            this.label_AddCarIdentifier.TabIndex = 4;
+            this.label_AddCarIdentifier.Text = "Add New Car";
             // 
-            // label3
+            // label_CarBrandIdentifier
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(257, 493);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Car Brand";
+            this.label_CarBrandIdentifier.AutoSize = true;
+            this.label_CarBrandIdentifier.Location = new System.Drawing.Point(257, 493);
+            this.label_CarBrandIdentifier.Name = "label_CarBrandIdentifier";
+            this.label_CarBrandIdentifier.Size = new System.Drawing.Size(76, 19);
+            this.label_CarBrandIdentifier.TabIndex = 5;
+            this.label_CarBrandIdentifier.Text = "Car Brand";
             // 
-            // TextBox_CarName
+            // textbox_CarName
             // 
-            this.TextBox_CarName.Location = new System.Drawing.Point(432, 515);
-            this.TextBox_CarName.Name = "TextBox_CarName";
-            this.TextBox_CarName.Size = new System.Drawing.Size(112, 26);
-            this.TextBox_CarName.TabIndex = 6;
+            this.textbox_CarName.Location = new System.Drawing.Point(432, 515);
+            this.textbox_CarName.Name = "textbox_CarName";
+            this.textbox_CarName.Size = new System.Drawing.Size(112, 26);
+            this.textbox_CarName.TabIndex = 6;
             // 
-            // label4
+            // label_CarNameIdentifier
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(445, 493);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Car Name";
+            this.label_CarNameIdentifier.AutoSize = true;
+            this.label_CarNameIdentifier.Location = new System.Drawing.Point(445, 493);
+            this.label_CarNameIdentifier.Name = "label_CarNameIdentifier";
+            this.label_CarNameIdentifier.Size = new System.Drawing.Size(76, 19);
+            this.label_CarNameIdentifier.TabIndex = 7;
+            this.label_CarNameIdentifier.Text = "Car Name";
             // 
-            // TextBox_CarColor
+            // textbox_CarColor
             // 
-            this.TextBox_CarColor.Location = new System.Drawing.Point(623, 515);
-            this.TextBox_CarColor.Name = "TextBox_CarColor";
-            this.TextBox_CarColor.Size = new System.Drawing.Size(122, 26);
-            this.TextBox_CarColor.TabIndex = 8;
+            this.textbox_CarColor.Location = new System.Drawing.Point(623, 515);
+            this.textbox_CarColor.Name = "textbox_CarColor";
+            this.textbox_CarColor.Size = new System.Drawing.Size(122, 26);
+            this.textbox_CarColor.TabIndex = 8;
             // 
-            // TextBox_CarType
+            // textbox_CarType
             // 
-            this.TextBox_CarType.Location = new System.Drawing.Point(787, 515);
-            this.TextBox_CarType.Name = "TextBox_CarType";
-            this.TextBox_CarType.Size = new System.Drawing.Size(113, 26);
-            this.TextBox_CarType.TabIndex = 9;
+            this.textbox_CarType.Location = new System.Drawing.Point(787, 515);
+            this.textbox_CarType.Name = "textbox_CarType";
+            this.textbox_CarType.Size = new System.Drawing.Size(113, 26);
+            this.textbox_CarType.TabIndex = 9;
             // 
-            // label5
+            // label_CarColorIdentifier
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(643, 493);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 19);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Car Color";
+            this.label_CarColorIdentifier.AutoSize = true;
+            this.label_CarColorIdentifier.Location = new System.Drawing.Point(643, 493);
+            this.label_CarColorIdentifier.Name = "label_CarColorIdentifier";
+            this.label_CarColorIdentifier.Size = new System.Drawing.Size(76, 19);
+            this.label_CarColorIdentifier.TabIndex = 10;
+            this.label_CarColorIdentifier.Text = "Car Color";
             // 
-            // label6
+            // label_CarTypeIdentifier
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(802, 493);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 19);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Car Type";
+            this.label_CarTypeIdentifier.AutoSize = true;
+            this.label_CarTypeIdentifier.Location = new System.Drawing.Point(802, 493);
+            this.label_CarTypeIdentifier.Name = "label_CarTypeIdentifier";
+            this.label_CarTypeIdentifier.Size = new System.Drawing.Size(74, 19);
+            this.label_CarTypeIdentifier.TabIndex = 11;
+            this.label_CarTypeIdentifier.Text = "Car Type";
             // 
-            // Button_AddCar
+            // button_AddCar
             // 
-            this.Button_AddCar.Location = new System.Drawing.Point(462, 577);
-            this.Button_AddCar.Name = "Button_AddCar";
-            this.Button_AddCar.Size = new System.Drawing.Size(112, 55);
-            this.Button_AddCar.TabIndex = 12;
-            this.Button_AddCar.Text = "Add Car";
-            this.toolTip_AddCar.SetToolTip(this.Button_AddCar, "Fill out the text boxes and add a car. An ID will be randomly generated for it. ");
-            this.Button_AddCar.UseVisualStyleBackColor = true;
-            this.Button_AddCar.Click += new System.EventHandler(this.button1_Click);
+            this.button_AddCar.Location = new System.Drawing.Point(462, 577);
+            this.button_AddCar.Name = "button_AddCar";
+            this.button_AddCar.Size = new System.Drawing.Size(112, 55);
+            this.button_AddCar.TabIndex = 12;
+            this.button_AddCar.Text = "Add Car";
+            this.toolTip_AddCar.SetToolTip(this.button_AddCar, "Fill out the text boxes and add a car. An ID will be randomly generated for it. ");
+            this.button_AddCar.UseVisualStyleBackColor = true;
+            this.button_AddCar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Button_RemoveCar
+            // button_RemoveCar
             // 
-            this.Button_RemoveCar.Location = new System.Drawing.Point(595, 368);
-            this.Button_RemoveCar.Name = "Button_RemoveCar";
-            this.Button_RemoveCar.Size = new System.Drawing.Size(109, 55);
-            this.Button_RemoveCar.TabIndex = 13;
-            this.Button_RemoveCar.Text = "Remove Car";
-            this.toolTip_RemoveCar.SetToolTip(this.Button_RemoveCar, "To delete a car, select an ID from the list before clicking remove. ");
-            this.Button_RemoveCar.UseVisualStyleBackColor = true;
-            this.Button_RemoveCar.Click += new System.EventHandler(this.Button_RemoveCar_Click);
+            this.button_RemoveCar.Location = new System.Drawing.Point(595, 368);
+            this.button_RemoveCar.Name = "button_RemoveCar";
+            this.button_RemoveCar.Size = new System.Drawing.Size(109, 55);
+            this.button_RemoveCar.TabIndex = 13;
+            this.button_RemoveCar.Text = "Remove Car";
+            this.toolTip_RemoveCar.SetToolTip(this.button_RemoveCar, "To delete a car, select an ID from the list before clicking remove. ");
+            this.button_RemoveCar.UseVisualStyleBackColor = true;
+            this.button_RemoveCar.Click += new System.EventHandler(this.Button_RemoveCar_Click);
             // 
-            // Button_UpdateCar
+            // button_UpdateCar
             // 
-            this.Button_UpdateCar.Location = new System.Drawing.Point(595, 577);
-            this.Button_UpdateCar.Name = "Button_UpdateCar";
-            this.Button_UpdateCar.Size = new System.Drawing.Size(112, 55);
-            this.Button_UpdateCar.TabIndex = 14;
-            this.Button_UpdateCar.Text = "Update Car";
-            this.toolTip_updateCar.SetToolTip(this.Button_UpdateCar, "To update a car, fill out its information and select an ID.\r\n");
-            this.Button_UpdateCar.UseVisualStyleBackColor = true;
-            this.Button_UpdateCar.Click += new System.EventHandler(this.Button_UpdateCar_Click);
+            this.button_UpdateCar.Location = new System.Drawing.Point(595, 577);
+            this.button_UpdateCar.Name = "button_UpdateCar";
+            this.button_UpdateCar.Size = new System.Drawing.Size(112, 55);
+            this.button_UpdateCar.TabIndex = 14;
+            this.button_UpdateCar.Text = "Update Car";
+            this.toolTip_updateCar.SetToolTip(this.button_UpdateCar, "To update a car, fill out its information and select an ID.\r\n");
+            this.button_UpdateCar.UseVisualStyleBackColor = true;
+            this.button_UpdateCar.Click += new System.EventHandler(this.Button_UpdateCar_Click);
             // 
-            // label7
+            // label_ActiveUsername
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("High Tower Text", 16F);
-            this.label7.Location = new System.Drawing.Point(1003, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 26);
-            this.label7.TabIndex = 15;
+            this.label_ActiveUsername.AutoSize = true;
+            this.label_ActiveUsername.Font = new System.Drawing.Font("High Tower Text", 16F);
+            this.label_ActiveUsername.Location = new System.Drawing.Point(1003, 144);
+            this.label_ActiveUsername.Name = "label_ActiveUsername";
+            this.label_ActiveUsername.Size = new System.Drawing.Size(0, 26);
+            this.label_ActiveUsername.TabIndex = 15;
             // 
-            // label8
+            // label_ActiveUserIdentifier
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("High Tower Text", 20F);
-            this.label8.Location = new System.Drawing.Point(971, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 32);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Logged in as:";
+            this.label_ActiveUserIdentifier.AutoSize = true;
+            this.label_ActiveUserIdentifier.Font = new System.Drawing.Font("High Tower Text", 20F);
+            this.label_ActiveUserIdentifier.Location = new System.Drawing.Point(971, 96);
+            this.label_ActiveUserIdentifier.Name = "label_ActiveUserIdentifier";
+            this.label_ActiveUserIdentifier.Size = new System.Drawing.Size(157, 32);
+            this.label_ActiveUserIdentifier.TabIndex = 16;
+            this.label_ActiveUserIdentifier.Text = "Logged in as:";
             // 
             // toolTip_updateCar
             // 
@@ -236,26 +236,26 @@ namespace CarInventory
             this.UserError_Label.Size = new System.Drawing.Size(0, 19);
             this.UserError_Label.TabIndex = 17;
             // 
-            // AccountSettings_Button
+            // button_AccountSettings
             // 
-            this.AccountSettings_Button.Location = new System.Drawing.Point(977, 228);
-            this.AccountSettings_Button.Name = "AccountSettings_Button";
-            this.AccountSettings_Button.Size = new System.Drawing.Size(151, 45);
-            this.AccountSettings_Button.TabIndex = 18;
-            this.AccountSettings_Button.Text = "Account Settings";
-            this.AccountSettings_Button.UseVisualStyleBackColor = true;
-            this.AccountSettings_Button.Click += new System.EventHandler(this.AccountSettings_Button_Click);
+            this.button_AccountSettings.Location = new System.Drawing.Point(977, 228);
+            this.button_AccountSettings.Name = "button_AccountSettings";
+            this.button_AccountSettings.Size = new System.Drawing.Size(151, 45);
+            this.button_AccountSettings.TabIndex = 18;
+            this.button_AccountSettings.Text = "Account Settings";
+            this.button_AccountSettings.UseVisualStyleBackColor = true;
+            this.button_AccountSettings.Click += new System.EventHandler(this.AccountSettings_Button_Click);
             // 
-            // ClearErrors_Button
+            // button_ClearErrors
             // 
-            this.ClearErrors_Button.Location = new System.Drawing.Point(1008, 577);
-            this.ClearErrors_Button.Name = "ClearErrors_Button";
-            this.ClearErrors_Button.Size = new System.Drawing.Size(91, 55);
-            this.ClearErrors_Button.TabIndex = 19;
-            this.ClearErrors_Button.Text = "Clear Error List";
-            this.ClearErrors_Button.UseVisualStyleBackColor = true;
-            this.ClearErrors_Button.Visible = false;
-            this.ClearErrors_Button.Click += new System.EventHandler(this.ClearErrors_Button_Click);
+            this.button_ClearErrors.Location = new System.Drawing.Point(1008, 577);
+            this.button_ClearErrors.Name = "button_ClearErrors";
+            this.button_ClearErrors.Size = new System.Drawing.Size(91, 55);
+            this.button_ClearErrors.TabIndex = 19;
+            this.button_ClearErrors.Text = "Clear Error List";
+            this.button_ClearErrors.UseVisualStyleBackColor = true;
+            this.button_ClearErrors.Visible = false;
+            this.button_ClearErrors.Click += new System.EventHandler(this.ClearErrors_Button_Click);
             // 
             // toolTip_GetInventory
             // 
@@ -275,25 +275,25 @@ namespace CarInventory
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1200, 657);
-            this.Controls.Add(this.ClearErrors_Button);
-            this.Controls.Add(this.AccountSettings_Button);
+            this.Controls.Add(this.button_ClearErrors);
+            this.Controls.Add(this.button_AccountSettings);
             this.Controls.Add(this.UserError_Label);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Button_UpdateCar);
-            this.Controls.Add(this.Button_RemoveCar);
-            this.Controls.Add(this.Button_AddCar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.TextBox_CarType);
-            this.Controls.Add(this.TextBox_CarColor);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.TextBox_CarName);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.TextBox_CarBrand);
-            this.Controls.Add(this.Button_GetAllCars);
-            this.Controls.Add(this.List_CarResults);
+            this.Controls.Add(this.label_ActiveUserIdentifier);
+            this.Controls.Add(this.label_ActiveUsername);
+            this.Controls.Add(this.button_UpdateCar);
+            this.Controls.Add(this.button_RemoveCar);
+            this.Controls.Add(this.button_AddCar);
+            this.Controls.Add(this.label_CarTypeIdentifier);
+            this.Controls.Add(this.label_CarColorIdentifier);
+            this.Controls.Add(this.textbox_CarType);
+            this.Controls.Add(this.textbox_CarColor);
+            this.Controls.Add(this.label_CarNameIdentifier);
+            this.Controls.Add(this.textbox_CarName);
+            this.Controls.Add(this.label_CarBrandIdentifier);
+            this.Controls.Add(this.label_AddCarIdentifier);
+            this.Controls.Add(this.textbox_CarBrand);
+            this.Controls.Add(this.button_GetAllCars);
+            this.Controls.Add(this.list_CarResults);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -309,27 +309,27 @@ namespace CarInventory
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox List_CarResults;
-        private System.Windows.Forms.Button Button_GetAllCars;
-        private System.Windows.Forms.TextBox TextBox_CarBrand;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TextBox_CarName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TextBox_CarColor;
-        private System.Windows.Forms.TextBox TextBox_CarType;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Button_AddCar;
-        private System.Windows.Forms.Button Button_RemoveCar;
-        private System.Windows.Forms.Button Button_UpdateCar;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox list_CarResults;
+        private System.Windows.Forms.Button button_GetAllCars;
+        private System.Windows.Forms.TextBox textbox_CarBrand;
+        private System.Windows.Forms.Label label_AddCarIdentifier;
+        private System.Windows.Forms.Label label_CarBrandIdentifier;
+        private System.Windows.Forms.TextBox textbox_CarName;
+        private System.Windows.Forms.Label label_CarNameIdentifier;
+        private System.Windows.Forms.TextBox textbox_CarColor;
+        private System.Windows.Forms.TextBox textbox_CarType;
+        private System.Windows.Forms.Label label_CarColorIdentifier;
+        private System.Windows.Forms.Label label_CarTypeIdentifier;
+        private System.Windows.Forms.Button button_AddCar;
+        private System.Windows.Forms.Button button_RemoveCar;
+        private System.Windows.Forms.Button button_UpdateCar;
+        private System.Windows.Forms.Label label_ActiveUsername;
+        private System.Windows.Forms.Label label_ActiveUserIdentifier;
         private System.Windows.Forms.ToolTip toolTip_updateCar;
         private System.Windows.Forms.ToolTip toolTip_RemoveCar;
         private System.Windows.Forms.Label UserError_Label;
-        private System.Windows.Forms.Button AccountSettings_Button;
-        private System.Windows.Forms.Button ClearErrors_Button;
+        private System.Windows.Forms.Button button_AccountSettings;
+        private System.Windows.Forms.Button button_ClearErrors;
         private System.Windows.Forms.ToolTip toolTip_GetInventory;
         private System.Windows.Forms.ToolTip toolTip_AddCar;
     }

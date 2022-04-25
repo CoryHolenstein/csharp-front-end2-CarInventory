@@ -30,99 +30,99 @@ namespace RegisterUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterFormUI));
-            this.Label_RegisterTxt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label_RegisterTxt = new System.Windows.Forms.Label();
+            this.label_UsernameIdentifier = new System.Windows.Forms.Label();
+            this.textbox_Username = new System.Windows.Forms.TextBox();
+            this.label_PasswordIdentifier = new System.Windows.Forms.Label();
+            this.textbox_Password = new System.Windows.Forms.TextBox();
+            this.label_ConfirmPassword = new System.Windows.Forms.Label();
+            this.textbox_ConfirmPassword = new System.Windows.Forms.TextBox();
+            this.button_LoginRedirect = new System.Windows.Forms.Button();
+            this.button_RegisterAccount = new System.Windows.Forms.Button();
             this.Label_RegisterResponse = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Label_RegisterTxt
+            // label_RegisterTxt
             // 
-            this.Label_RegisterTxt.AutoSize = true;
-            this.Label_RegisterTxt.Font = new System.Drawing.Font("High Tower Text", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_RegisterTxt.ForeColor = System.Drawing.Color.Brown;
-            this.Label_RegisterTxt.Location = new System.Drawing.Point(487, 9);
-            this.Label_RegisterTxt.Name = "Label_RegisterTxt";
-            this.Label_RegisterTxt.Size = new System.Drawing.Size(187, 57);
-            this.Label_RegisterTxt.TabIndex = 0;
-            this.Label_RegisterTxt.Text = "Register";
+            this.label_RegisterTxt.AutoSize = true;
+            this.label_RegisterTxt.Font = new System.Drawing.Font("High Tower Text", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_RegisterTxt.ForeColor = System.Drawing.Color.Brown;
+            this.label_RegisterTxt.Location = new System.Drawing.Point(487, 9);
+            this.label_RegisterTxt.Name = "label_RegisterTxt";
+            this.label_RegisterTxt.Size = new System.Drawing.Size(187, 57);
+            this.label_RegisterTxt.TabIndex = 0;
+            this.label_RegisterTxt.Text = "Register";
             // 
-            // label1
+            // label_UsernameIdentifier
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(493, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username:";
+            this.label_UsernameIdentifier.AutoSize = true;
+            this.label_UsernameIdentifier.Location = new System.Drawing.Point(493, 176);
+            this.label_UsernameIdentifier.Name = "label_UsernameIdentifier";
+            this.label_UsernameIdentifier.Size = new System.Drawing.Size(79, 19);
+            this.label_UsernameIdentifier.TabIndex = 1;
+            this.label_UsernameIdentifier.Text = "Username:";
             // 
-            // textBox1
+            // textbox_Username
             // 
-            this.textBox1.Location = new System.Drawing.Point(497, 198);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 26);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textbox_Username.Location = new System.Drawing.Point(497, 198);
+            this.textbox_Username.Name = "textbox_Username";
+            this.textbox_Username.Size = new System.Drawing.Size(174, 26);
+            this.textbox_Username.TabIndex = 2;
+            this.textbox_Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label2
+            // label_PasswordIdentifier
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(496, 244);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password:";
+            this.label_PasswordIdentifier.AutoSize = true;
+            this.label_PasswordIdentifier.Location = new System.Drawing.Point(496, 244);
+            this.label_PasswordIdentifier.Name = "label_PasswordIdentifier";
+            this.label_PasswordIdentifier.Size = new System.Drawing.Size(76, 19);
+            this.label_PasswordIdentifier.TabIndex = 3;
+            this.label_PasswordIdentifier.Text = "Password:";
             // 
-            // textBox2
+            // textbox_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(497, 266);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 26);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textbox_Password.Location = new System.Drawing.Point(497, 266);
+            this.textbox_Password.Name = "textbox_Password";
+            this.textbox_Password.Size = new System.Drawing.Size(177, 26);
+            this.textbox_Password.TabIndex = 4;
+            this.textbox_Password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label3
+            // label_ConfirmPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(496, 322);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Confirm Password:";
+            this.label_ConfirmPassword.AutoSize = true;
+            this.label_ConfirmPassword.Location = new System.Drawing.Point(496, 322);
+            this.label_ConfirmPassword.Name = "label_ConfirmPassword";
+            this.label_ConfirmPassword.Size = new System.Drawing.Size(136, 19);
+            this.label_ConfirmPassword.TabIndex = 5;
+            this.label_ConfirmPassword.Text = "Confirm Password:";
             // 
-            // textBox3
+            // textbox_ConfirmPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(497, 344);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 26);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textbox_ConfirmPassword.Location = new System.Drawing.Point(497, 344);
+            this.textbox_ConfirmPassword.Name = "textbox_ConfirmPassword";
+            this.textbox_ConfirmPassword.Size = new System.Drawing.Size(174, 26);
+            this.textbox_ConfirmPassword.TabIndex = 6;
+            this.textbox_ConfirmPassword.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button1
+            // button_LoginRedirect
             // 
-            this.button1.Location = new System.Drawing.Point(497, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 67);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Back To Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_LoginRedirect.Location = new System.Drawing.Point(497, 376);
+            this.button_LoginRedirect.Name = "button_LoginRedirect";
+            this.button_LoginRedirect.Size = new System.Drawing.Size(83, 67);
+            this.button_LoginRedirect.TabIndex = 7;
+            this.button_LoginRedirect.Text = "Back To Login";
+            this.button_LoginRedirect.UseVisualStyleBackColor = true;
+            this.button_LoginRedirect.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button_RegisterAccount
             // 
-            this.button2.Location = new System.Drawing.Point(586, 376);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 67);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Register Account";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_RegisterAccount.Location = new System.Drawing.Point(586, 376);
+            this.button_RegisterAccount.Name = "button_RegisterAccount";
+            this.button_RegisterAccount.Size = new System.Drawing.Size(85, 67);
+            this.button_RegisterAccount.TabIndex = 8;
+            this.button_RegisterAccount.Text = "Register Account";
+            this.button_RegisterAccount.UseVisualStyleBackColor = true;
+            this.button_RegisterAccount.Click += new System.EventHandler(this.button2_Click);
             // 
             // Label_RegisterResponse
             // 
@@ -140,15 +140,15 @@ namespace RegisterUI
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1200, 624);
             this.Controls.Add(this.Label_RegisterResponse);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Label_RegisterTxt);
+            this.Controls.Add(this.button_RegisterAccount);
+            this.Controls.Add(this.button_LoginRedirect);
+            this.Controls.Add(this.textbox_ConfirmPassword);
+            this.Controls.Add(this.label_ConfirmPassword);
+            this.Controls.Add(this.textbox_Password);
+            this.Controls.Add(this.label_PasswordIdentifier);
+            this.Controls.Add(this.textbox_Username);
+            this.Controls.Add(this.label_UsernameIdentifier);
+            this.Controls.Add(this.label_RegisterTxt);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -162,15 +162,15 @@ namespace RegisterUI
 
         #endregion
 
-        private System.Windows.Forms.Label Label_RegisterTxt;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label_RegisterTxt;
+        private System.Windows.Forms.Label label_UsernameIdentifier;
+        private System.Windows.Forms.TextBox textbox_Username;
+        private System.Windows.Forms.Label label_PasswordIdentifier;
+        private System.Windows.Forms.TextBox textbox_Password;
+        private System.Windows.Forms.Label label_ConfirmPassword;
+        private System.Windows.Forms.TextBox textbox_ConfirmPassword;
+        private System.Windows.Forms.Button button_LoginRedirect;
+        private System.Windows.Forms.Button button_RegisterAccount;
         private System.Windows.Forms.Label Label_RegisterResponse;
     }
 }

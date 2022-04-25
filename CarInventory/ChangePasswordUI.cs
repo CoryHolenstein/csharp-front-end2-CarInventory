@@ -40,12 +40,12 @@ namespace CarInventory
 
         private void password_TextBox_TextChanged(object sender, EventArgs e)
         {
-            newPassword = password_TextBox.Text;
+            newPassword = textbox_password.Text;
         }
 
         private void confirmPassword_TextBox_TextChanged(object sender, EventArgs e)
         {
-            newPasswordConf =  confirmPassword_TextBox.Text;
+            newPasswordConf =  textbox_ConfirmPassword.Text;
         }
 
         private async void SaveInformation_Button_Click(object sender, EventArgs e)

@@ -44,12 +44,12 @@ namespace LoginUI
         //username
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           username = textBox1.Text;
+           username = textbox_Username.Text;
         }
         //password
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            password = textBox2.Text;
+            password = textbox_Password.Text;
         }
 
         private async void Button_LoginButton_Click(object sender, EventArgs e)

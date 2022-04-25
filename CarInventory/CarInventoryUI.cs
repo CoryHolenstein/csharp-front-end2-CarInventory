@@ -57,12 +57,12 @@ namespace CarInventory
         }
 
     
-
+        //get all vehicles 
         private async void Button_GetAllCars_Click(object sender, EventArgs e)
         {
 
 
-            label7.Text = Stored_UserName;
+      
 
             var client = new HttpClient();
 
@@ -82,37 +82,38 @@ namespace CarInventory
 				string name = p.Name;
 				//string value = (string)p.Value;
 				Console.WriteLine(name + " -- " + p.Value);
-                     List_CarResults.Items.Add(p.Value);
+                     list_CarResults.Items.Add(p.Value);
 			}
 		}
         }
 
+        //update the cars information. fill out the boxes, select an Id and click update
         private async void Button_UpdateCar_Click(object sender, EventArgs e)
         {
            
            
-            if (List_CarResults.SelectedIndex >= 0)
+            if (list_CarResults.SelectedIndex >= 0)
             {
                 Console.WriteLine("selected item");
                 //  Console.WriteLine(List_CarResults.SelectedItem.ToString());
                 // if (List_CarResults.SelectedItem.ToString().Contains("InventoryID"))
-                if (int.TryParse(List_CarResults.SelectedItem.ToString(), out int value))
+                if (int.TryParse(list_CarResults.SelectedItem.ToString(), out int value))
                 {
                     //call
                     Console.WriteLine("api call time baby");
                     var client = new HttpClient();
 
 
-                    var inventoryID = List_CarResults.SelectedItem.ToString();
+                    var inventoryID = list_CarResults.SelectedItem.ToString();
 
-                    if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+                    if (textbox_CarBrand.Text == "" || textbox_CarName.Text == "" || textbox_CarColor.Text == "" || textbox_CarType.Text == "")
                     {
                         Console.WriteLine("Please input all fields!");
                         Create_Error_List("Please input all fields!");
                     }
                     else
                     {
-                        CarInfo updateCar = new CarInfo(int.Parse(inventoryID), TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
+                        CarInfo updateCar = new CarInfo(int.Parse(inventoryID), textbox_CarBrand.Text, textbox_CarName.Text, textbox_CarColor.Text, textbox_CarType.Text);
                         var requestContent = JsonContent.Create(updateCar);
                         var response = await client.PostAsync("http://localhost:3000/inventory/updatecar", requestContent);
                         var contents = await response.Content.ReadAsStringAsync();
@@ -125,7 +126,7 @@ namespace CarInventory
 
                 }
             }
-            else if (List_CarResults.SelectedIndex < 0)
+            else if (list_CarResults.SelectedIndex < 0)
             {
                 Console.WriteLine("no item selected.");
                 Create_Error_List("Select an ID from the list!");
@@ -135,19 +136,19 @@ namespace CarInventory
         //remvoe car button, works by clicking on the car ID in the list and clicking remove. 
         private async void Button_RemoveCar_Click(object sender, EventArgs e)
         {
-            if (List_CarResults.SelectedIndex >= 0)
+            if (list_CarResults.SelectedIndex >= 0)
             {
                 Console.WriteLine("selected item");
                 //  Console.WriteLine(List_CarResults.SelectedItem.ToString());
                 // if (List_CarResults.SelectedItem.ToString().Contains("InventoryID"))
-                if (int.TryParse(List_CarResults.SelectedItem.ToString(), out int value))
+                if (int.TryParse(list_CarResults.SelectedItem.ToString(), out int value))
                 {
                     //call
                     Console.WriteLine("api call time baby");
                     var client = new HttpClient();
 
 
-                    var inventoryID = List_CarResults.SelectedItem.ToString();
+                    var inventoryID = list_CarResults.SelectedItem.ToString();
                     CarInfo deleteCar = new CarInfo(int.Parse(inventoryID));
                     //int inventoryIDToSend = int.Parse(inventoryID);
 
@@ -176,7 +177,7 @@ namespace CarInventory
             var client = new HttpClient();
 
             
-            if (TextBox_CarBrand.Text == "" || TextBox_CarName.Text == "" || TextBox_CarColor.Text == "" || TextBox_CarType.Text == "")
+            if (textbox_CarBrand.Text == "" || textbox_CarName.Text == "" || textbox_CarColor.Text == "" || textbox_CarType.Text == "")
             {
                 Console.WriteLine("Please input all fields!");
                 Create_Error_List("Please input all fields!");
@@ -184,7 +185,7 @@ namespace CarInventory
             }
             else
             {
-                CarInfo newCar = new CarInfo(card, TextBox_CarBrand.Text, TextBox_CarName.Text, TextBox_CarColor.Text, TextBox_CarType.Text);
+                CarInfo newCar = new CarInfo(card, textbox_CarBrand.Text, textbox_CarName.Text, textbox_CarColor.Text, textbox_CarType.Text);
                 Console.WriteLine(newCar.ToString());
                 var requestContent = JsonContent.Create(newCar);
 
@@ -195,33 +196,35 @@ namespace CarInventory
             }
         }
 
-
+        //empty the list box
         private void emptylistbox(object sender, EventArgs e)
         {
-            List_CarResults.Items.Clear();
+            list_CarResults.Items.Clear();
         }
 
+        //Navigate to account settings page
         private void AccountSettings_Button_Click(object sender, EventArgs e)
         {
-            //navigate to account settings form TBA
+         
             Form accountSettingsForm = new Form();
             ((Control)ActiveForm).Hide();
             accountSettingsForm = new AccountSettingsUI();
             accountSettingsForm.Show();
         }
 
-        //on page load, call inventory 
+        //on page load, call inventory and display logged in username
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             Button_GetAllCars_Click(this, e);
+            label_ActiveUsername.Text = Stored_UserName;
 
         }
 
         //We use this to clear the errors list and set the button invisible
         private void ClearErrors_Button_Click(object sender, EventArgs e)
         {
-            ClearErrors_Button.Visible = false;
+            button_ClearErrors.Visible = false;
             UserError_Label.Text = "";
         }
 
@@ -243,7 +246,7 @@ namespace CarInventory
 
             UserError_Label.Text += errorMessage + "\n";
 
-            ClearErrors_Button.Visible = true;
+            button_ClearErrors.Visible = true;
         }
 
         //was going to use this timer to auto clear error messages for user, but it just created more problems and is not the best practice

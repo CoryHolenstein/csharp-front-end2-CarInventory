@@ -44,17 +44,17 @@ namespace RegisterUI
         //username text box
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            username = textBox1.Text;
+            username = textbox_Username.Text;
         }
         //password text box
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            password = textBox2.Text;
+            password = textbox_Password.Text;
         }
         //confirm password text box
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            passwordConfirmation = textBox3.Text;
+            passwordConfirmation = textbox_ConfirmPassword.Text;
         }
 
         public RegisterFormUI()
