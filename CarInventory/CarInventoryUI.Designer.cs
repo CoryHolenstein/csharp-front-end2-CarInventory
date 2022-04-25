@@ -30,6 +30,7 @@ namespace CarInventory
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarInventoryUI));
             this.label1 = new System.Windows.Forms.Label();
             this.List_CarResults = new System.Windows.Forms.ListBox();
             this.Button_GetAllCars = new System.Windows.Forms.Button();
@@ -295,8 +296,10 @@ namespace CarInventory
             this.Controls.Add(this.List_CarResults);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CarInventoryUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Inventory";
             this.ResumeLayout(false);
             this.PerformLayout();

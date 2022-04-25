@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static UserInformation.UserInformation;
 using System.Windows.Forms;
 
 namespace CarInventory
@@ -15,6 +16,30 @@ namespace CarInventory
         public AccountSettingsUI()
         {
             InitializeComponent();
+        }
+
+
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            Username_Label.Text = Stored_UserName;
+            Password_Label.Text = "***";
+
+        }
+
+        private void ChangePassword_Button_Click(object sender, EventArgs e)
+        {
+            ChangePasswordUI changePassUI = new ChangePasswordUI();
+            changePassUI.Show();
+        }
+
+        private void MainPage_Button_Click(object sender, EventArgs e)
+        {
+            Form carInventoryform = new Form();
+            ((Control)ActiveForm).Hide();
+            carInventoryform = new CarInventory.CarInventoryUI();
+            carInventoryform.Show();
         }
     }
 }

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordUI));
             this.NewPassword_Label = new System.Windows.Forms.Label();
             this.ConfirmPassword_Label = new System.Windows.Forms.Label();
-            this.password_Textbox = new System.Windows.Forms.TextBox();
-            this.username_TextBox = new System.Windows.Forms.TextBox();
+            this.password_TextBox = new System.Windows.Forms.TextBox();
+            this.confirmPassword_TextBox = new System.Windows.Forms.TextBox();
             this.SaveInformation_Button = new System.Windows.Forms.Button();
+            this.PasswordUpdateResponse_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NewPassword_Label
@@ -55,31 +57,43 @@
             this.ConfirmPassword_Label.TabIndex = 1;
             this.ConfirmPassword_Label.Text = "Confirm Password:";
             // 
-            // password_Textbox
+            // password_TextBox
             // 
-            this.password_Textbox.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_Textbox.Location = new System.Drawing.Point(307, 92);
-            this.password_Textbox.Name = "password_Textbox";
-            this.password_Textbox.Size = new System.Drawing.Size(122, 30);
-            this.password_Textbox.TabIndex = 2;
+            this.password_TextBox.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_TextBox.Location = new System.Drawing.Point(307, 92);
+            this.password_TextBox.Name = "password_TextBox";
+            this.password_TextBox.Size = new System.Drawing.Size(122, 30);
+            this.password_TextBox.TabIndex = 2;
+            this.password_TextBox.TextChanged += new System.EventHandler(this.password_TextBox_TextChanged);
             // 
-            // username_TextBox
+            // confirmPassword_TextBox
             // 
-            this.username_TextBox.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_TextBox.Location = new System.Drawing.Point(310, 185);
-            this.username_TextBox.Name = "username_TextBox";
-            this.username_TextBox.Size = new System.Drawing.Size(119, 30);
-            this.username_TextBox.TabIndex = 3;
+            this.confirmPassword_TextBox.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassword_TextBox.Location = new System.Drawing.Point(310, 185);
+            this.confirmPassword_TextBox.Name = "confirmPassword_TextBox";
+            this.confirmPassword_TextBox.Size = new System.Drawing.Size(119, 30);
+            this.confirmPassword_TextBox.TabIndex = 3;
+            this.confirmPassword_TextBox.TextChanged += new System.EventHandler(this.confirmPassword_TextBox_TextChanged);
             // 
             // SaveInformation_Button
             // 
             this.SaveInformation_Button.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveInformation_Button.Location = new System.Drawing.Point(299, 278);
+            this.SaveInformation_Button.Location = new System.Drawing.Point(299, 291);
             this.SaveInformation_Button.Name = "SaveInformation_Button";
             this.SaveInformation_Button.Size = new System.Drawing.Size(130, 58);
             this.SaveInformation_Button.TabIndex = 4;
             this.SaveInformation_Button.Text = "Save";
             this.SaveInformation_Button.UseVisualStyleBackColor = true;
+            this.SaveInformation_Button.Click += new System.EventHandler(this.SaveInformation_Button_Click);
+            // 
+            // PasswordUpdateResponse_Label
+            // 
+            this.PasswordUpdateResponse_Label.AutoSize = true;
+            this.PasswordUpdateResponse_Label.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordUpdateResponse_Label.Location = new System.Drawing.Point(306, 241);
+            this.PasswordUpdateResponse_Label.Name = "PasswordUpdateResponse_Label";
+            this.PasswordUpdateResponse_Label.Size = new System.Drawing.Size(0, 19);
+            this.PasswordUpdateResponse_Label.TabIndex = 5;
             // 
             // ChangePasswordUI
             // 
@@ -87,14 +101,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(667, 381);
+            this.Controls.Add(this.PasswordUpdateResponse_Label);
             this.Controls.Add(this.SaveInformation_Button);
-            this.Controls.Add(this.username_TextBox);
-            this.Controls.Add(this.password_Textbox);
+            this.Controls.Add(this.confirmPassword_TextBox);
+            this.Controls.Add(this.password_TextBox);
             this.Controls.Add(this.ConfirmPassword_Label);
             this.Controls.Add(this.NewPassword_Label);
             this.Font = new System.Drawing.Font("High Tower Text", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "ChangePasswordUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePasswordUI";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,8 +122,9 @@
 
         private System.Windows.Forms.Label NewPassword_Label;
         private System.Windows.Forms.Label ConfirmPassword_Label;
-        private System.Windows.Forms.TextBox password_Textbox;
-        private System.Windows.Forms.TextBox username_TextBox;
+        private System.Windows.Forms.TextBox password_TextBox;
+        private System.Windows.Forms.TextBox confirmPassword_TextBox;
         private System.Windows.Forms.Button SaveInformation_Button;
+        private System.Windows.Forms.Label PasswordUpdateResponse_Label;
     }
 }

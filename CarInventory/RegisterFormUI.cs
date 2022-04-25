@@ -31,6 +31,7 @@ namespace RegisterUI
             }
         }
 
+        //navigate back to login page
         private void button1_Click(object sender, EventArgs e)
         {
 

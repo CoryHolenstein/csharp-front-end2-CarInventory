@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountSettingsUI));
             this.AccountSettings_Label = new System.Windows.Forms.Label();
             this.UsernameIdentifier_Label = new System.Windows.Forms.Label();
             this.Username_Label = new System.Windows.Forms.Label();
@@ -93,6 +94,7 @@
             this.ChangePassword_Button.TabIndex = 5;
             this.ChangePassword_Button.Text = "Change";
             this.ChangePassword_Button.UseVisualStyleBackColor = true;
+            this.ChangePassword_Button.Click += new System.EventHandler(this.ChangePassword_Button_Click);
             // 
             // MainPage_Button
             // 
@@ -102,6 +104,7 @@
             this.MainPage_Button.TabIndex = 6;
             this.MainPage_Button.Text = "Main Page";
             this.MainPage_Button.UseVisualStyleBackColor = true;
+            this.MainPage_Button.Click += new System.EventHandler(this.MainPage_Button_Click);
             // 
             // AccountSettingsUI
             // 
@@ -117,8 +120,10 @@
             this.Controls.Add(this.UsernameIdentifier_Label);
             this.Controls.Add(this.AccountSettings_Label);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AccountSettingsUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountSettingsUI";
             this.ResumeLayout(false);
             this.PerformLayout();

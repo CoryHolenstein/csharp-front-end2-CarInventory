@@ -29,6 +29,7 @@ namespace LoginUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFormUI));
             this.Label_LoginText = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -136,9 +137,9 @@ namespace LoginUI
             this.label3.ForeColor = System.Drawing.Color.Tan;
             this.label3.Location = new System.Drawing.Point(791, 333);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 22);
+            this.label3.Size = new System.Drawing.Size(85, 22);
             this.label3.TabIndex = 9;
-            this.label3.Text = "pass";
+            this.label3.Text = "password";
             // 
             // button1
             // 
@@ -168,8 +169,10 @@ namespace LoginUI
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Label_LoginText);
             this.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginFormUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginFormUI_Load);
             this.ResumeLayout(false);

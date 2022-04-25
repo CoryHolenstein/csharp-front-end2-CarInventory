@@ -128,6 +128,7 @@ namespace CarInventory
             else if (List_CarResults.SelectedIndex < 0)
             {
                 Console.WriteLine("no item selected.");
+                Create_Error_List("Select an ID from the list!");
             }
         }
 
@@ -163,6 +164,7 @@ namespace CarInventory
             else
             {
                 Console.WriteLine("no item selected.");
+                Create_Error_List("Select an ID from the list!");
             }
 
         }
@@ -202,6 +204,10 @@ namespace CarInventory
         private void AccountSettings_Button_Click(object sender, EventArgs e)
         {
             //navigate to account settings form TBA
+            Form accountSettingsForm = new Form();
+            ((Control)ActiveForm).Hide();
+            accountSettingsForm = new AccountSettingsUI();
+            accountSettingsForm.Show();
         }
 
         //on page load, call inventory 

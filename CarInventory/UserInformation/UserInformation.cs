@@ -9,5 +9,6 @@ namespace UserInformation
     public static class UserInformation
     {
         public static string Stored_UserName { get; set; }
+        public static string Stored_Password { get; set; }
     }
 }
